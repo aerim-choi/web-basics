@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>벅스차트예시</title>
+    <link rel="stylesheet" href="./tableEx.css">
+</head>
+
+<body>
+    <div class="musicChart">
+        <table>
+            <!-- 표의제목 caption -->
+            <caption>음원차트</caption>
+            <!-- thread열의 제목으로 구성된 행의 집합 -->
+            <thead>
+                <tr>
+                <!-- th 표의 제목 셀 생성 -->
+                    <th class="check"></th>
+                    <th class="albumArt"></th>
+                    <th class="title">
+                        <span>곡</span>
+                    </th>
+                    <th class="artist">
+                        <span>아티스트</span>
+                    </th>
+                    <th class="album">
+                        <span>앨범</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- tr표의 행 삽입 -->
+                <tr>
+                    <!-- 표의 일반 셀table data 생성 -->
+                    <td class="check">
+                        <input type="checkbox" title="파도"/>
+                    </td>
+                    <td>
+                        <a href="https://music.bugs.co.kr/album/20121074?wl_ref=list_tr_07_search" class="thumbnail">
+                            <img src="https://image.bugsm.co.kr/album/images/50/201210/20121074.jpg?version=20181225005117.0" alt="파도 대표이미지" />
+                        </a>
+                    </td>
+                    <td>
+                        <p class="title">
+                            <a href="javascript:;" title="파도">파도</a>
+                        </p>
+                    </td>
+                    <td>
+                        <p class="artist">
+                            <a href="https://music.bugs.co.kr/artist/20027236?wl_ref=list_tr_10_search" title="새소년">
+                            <mark>새소년</mark>
+                            </a>
+                        </p>
+                    </td>
+                    <td class="left">
+                        <a href="https://music.bugs.co.kr/album/20121074?wl_ref=list_tr_11_search" class="album" title="파도">
+                                파도
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+body {
+  text-align: center;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.musicChart {
+  position: relative;
+  display: flex;
+}
+
+.musicChart table {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.musicChart table caption {
+  font-size: 30px;
+  font-weight: 400;
+  padding: 20px 0;
+}
+
+table th {
+  background: #33333350;
+  padding: 6px 0;
+  font-weight: 400;
+} 

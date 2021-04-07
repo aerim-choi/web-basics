@@ -1,0 +1,45 @@
+/* COMMON */
+body{
+    background:#f6f5f0;
+}
+.material-icons{
+    color:#f6f5f0;
+    font-size:36px;
+    cursor:pointer;
+}
+/* HEADER */
+header{
+    position:fixed;
+    width:100%;
+    height:60px;
+    background:#000;
+    /* 상하로는 0 좌우로는 15px */
+    padding:0 15px; 
+    display:flex;
+    align-items: center;
+}
+header>.material-icons{
+    /* 부모요소를 기준으로 자리를잡겠다. 그러니같은자리에 오게됨 */
+    position:absolute;
+}
+header>.material-icons#btn--open{
+    display: block;
+}
+header>.material-icons#btn--close{
+    /* 기본상태 안보이게할래요 */
+    display:none;
+}
+/* SIDE MENU */
+nav{
+    position:absolute;
+    top:60px;
+    /* 띄어쓰기를해야함 */
+    height:calc(100% - 60px);
+    width:300px;
+    background:#000;
+    /* 기본상태를 안보이게하고싶다 */
+    transform:translateX(-100%);
+    /* 0으로바꾸면 다시돌아옴 */
+    /* 스르륵 열리고 닫히고싶다 */
+    transition:.4s ease;
+}

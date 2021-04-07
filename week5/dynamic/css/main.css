@@ -1,0 +1,24 @@
+/* COMMON */
+body{
+    height: 3000px;
+}
+img{
+    display:block;
+}
+/* HEADER */
+header {
+    position:fixed;
+    width:100%;
+    height: 400px;
+    background:#000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s ease;
+}
+
+header img#logo{
+    width:300px;
+    height: 300px;
+    transition: .7s ease;
+}
