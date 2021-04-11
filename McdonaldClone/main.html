@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"  id="description" contents="메뉴,레스토랑,프로모션 등 안내 메인">
+    <meta name="keywords" contents="McDonald's, McDrive, McDelivery, McMorning, Happy Meal, Signature Burger, McAllday, McCafe">
+    <!-- 파비콘 설정 -->
+    <link rel="shortcut icon" href="https://www.mcdonalds.co.kr/kor/images/favicon.ico" type="image/x-icon">
+    <!-- 모바일 사이트 지정 -->
+    <link rel="alternate" href="https://www.mcdonalds.co.kr">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>맥도날드 홈페이지</title>
+</head>
+<body style>
+    <div class="wrapper">
+		<header class="header" style="margin-top:0px;">
+			<!-- 상단고정 fiexed메뉴만들기-->
+			<div class="headArea">
+				<!-- 로고생성 -->
+				<!-- <strong>요소 는 중대하거나 긴급한 콘텐츠를 나타냅니다. 보통 브라우저는 굵은 글씨로 표시됩니다. -->
+				<strong class="hLogo">
+					<a href="http://www.mcdonalds.co.kr" class="logo" title="메인으로 이동">
+						<img src="https://www.mcdonalds.co.kr/kor/images/common/logo.png" alt="맥도날드">
+					</a>
+				</strong>
+				<!--  문서의 부분 중 현재 페이지 내, 또는 다른 페이지로의 링크를 보여주는 구획을 나타냅니다. 자주 쓰이는 예제는 메뉴, 목차, 색인입니다. -->
+				<!-- 메뉴라서 nav를 쓴것이다. -->
+				<nav class="hMenu">
+					<div class="menu">
+						<ul class="depth1">
+							<!-- Menu -->
+							<li>
+								<a href="https://www.mcdonalds.co.kr/kor/menu/list.do" class="dth1">Menu</a>
+								<!-- Menu하단 -->
+								<ul class="depth2">
+								<li><a href="https://www.mcdonalds.co.kr/kor/menu/list.do" class="dth2">버거</a></li>
+								<li><a href="https://www.mcdonalds.co.kr/kor/menu/list.do" role="button">맥런치</a> </li>	
+								<li><a href="https://www.mcdonalds.co.kr/kor/menu/list.do" class="dth2">맥모닝</a></li>
+								<li><a href="https://www.mcdonalds.co.kr/kor/menu/list.do" role="button">해피스낵</a> </li>	
+								<li><a href="https://www.mcdonalds.co.kr/kor/menu/list.do" role="dth2">사이드 & 디저트</a> </li>
+								<li><a href="https://www.mcdonalds.co.kr/kor/menu/list.do" role="dth2">맥카페 & 음료</a> </li>
+								<li><a href="https://www.mcdonalds.co.kr/kor/menu/list.do" role="dth2">해피밀</a> </li>			
+								
+							</ul>
+							</li>
+							<!-- Store -->
+							<li>
+								<a href="https://www.mcdonalds.co.kr/kor/store/main.do" class="dth1">Store</a>
+								<!-- Store하단 -->
+								<ul class="depth2">
+									<li><a href="https://www.mcdonalds.co.kr/kor/store/main.do" class="dth2">매장찾기</a></li>
+									<li><a href="https://www.mcdonalds.co.kr/kor/store/mcdelivery.do" class="dth2">맥딜리버리</a></li>
+									<li><a href="https://www.mcdonalds.co.kr/kor/store/mcdrive.do" class="dth2">맥드라이브</a></li>
+									<li><a href="https://www.mcdonalds.co.kr/kor/store/rental.do" class="dth2">임차문의</a></li>
+								</ul>
+							</li>
+							<!-- What's New -->
+							<li>
+								<!-- What's New하단 -->
+								<a href="https://www.mcdonalds.co.kr/kor/promotion/list.do" class="dth1">What's New</a>
+								<ul class="depth2">
+									<li><a href="https://www.mcdonalds.co.kr/kor/promotion/list.do" class="dth2">프로모션</a></li>
+									<li><a href="https://www.mcdonalds.co.kr/kor/news/list.do" class="dth2">새로운 소식</a></li>
+								    <li><a href="https://www.mcdonalds.co.kr/kor/happymeal/list.do" class="dth2">이달의 해피밀</a></li> 
+								</ul>		
+							</li>
+							<!-- story -->
+							<li>
+								<a href="https://www.mcdonalds.co.kr/kor/story/main.do" class="dth1  ">Story</a>
+								<!-- story하단 -->
+								<ul class="depth2">
+									<li><a href="https://www.mcdonalds.co.kr/kor/story/intro/brandintro.do" class="dth2">브랜드 소개</a></li>
+									<li><a href="https://www.mcdonalds.co.kr/kor/story/society/list.do" class="dth2">사회적 책임과 지원</a></li>
+									<li><a href="https://www.mcdonalds.co.kr/kor/story/competition/farmToRestaurant.do" class="dth2">맥도날드 경쟁력</a></li>
+									<li><a href="https://www.mcdonalds.co.kr/kor/story/people/crew.do" class="dth2">맥도날드 사람들</a></li>
+								</ul>
+							</li>
+						</ul>		
+					</div>
+					<form id="commonSearchForm" method="post">
+						<div class="util">
+							<a href="https://www.mcdonalds.co.kr/kor/story/people/recruit.do" class="recruit" title="인재채용으로 이동">RECRUIT</a>
+							<a href="https://www.mcdonalds.co.kr/eng/main.do" class="lang" title="영문사이트로 이동">ENG</a>
+							<div class="topSearch">
+								<button type="button" class="srch">검색열기</button>
+							</div>
+						</div>
+					</form>
+				</nav>
+			</div>
+		</header>
+		<!-- //header -->
+		<div id="container">
+			<div class="content">
+				<!-- <h1 class="hide" data-desc="메인">Main</h1> -->
+				<div class="mainEvent basicSwiper">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

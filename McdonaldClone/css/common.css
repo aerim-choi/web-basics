@@ -1,0 +1,234 @@
+* {
+    -webkit-text-size-adjust: none;
+    /* -webkit-box-sizing: border-box; */
+    /* -moz-box-sizing: border-box; */
+    box-sizing: border-box;
+}
+html {
+    margin: 0;
+    height: 100%;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, select, textarea, p, blockquote, th, td, button {
+    margin: 0;
+    padding: 0;
+}
+/* /* body */
+body, input, select, textarea, button, pre {
+    font-family: "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Arial, sans-serif;
+    color: rgb(128, 128, 128);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.9;
+}
+body {
+    height: 100%;
+    background: #fff;
+    word-wrap: break-word;
+    word-break: keep-all;
+} */
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    /* min-width는 width 속성의 사용값이 자신의 값보다 작아지는걸 방지합니다. */
+    min-width: 1280px;
+    min-height: 100%;
+    padding: 140px 0 230px;
+}
+/* 헤더영역 잡기 */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* min-width는 width 속성의 사용값이 자신의 값보다 작아지는걸 방지합니다. */
+    min-width: 1280px;
+    height: 141px;
+    text-align: center;
+    border-bottom: 1px solid #ffbc0d;
+    background: #fff;
+}
+
+.header.headArea{
+    /* 화면에 꽉차게 보이고싶을때 height:100%를 쓴다고한다 */
+    height: 100%;
+}
+.headArea{
+    width:1168px;
+    margin:0 auto;
+}
+/* 로고  */
+.header .hLogo{
+    position:relative;
+    top:28px;
+    /* 왼쪽부터흐르게! */
+    float:left;
+    /* 더 큰 z-index 값을 가진 요소가 작은 값의 요소 위를 덮습니다. */
+    z-index:1;
+}
+.header.hLogo a{
+    display:block;
+}
+/* 이미지 집어넣기 */
+img {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    vertical-align: top;
+}
+
+form, fieldset, img, input, button {
+    border: 0 none;
+    background: none;
+}
+a{
+    text-decoration: none;
+    color:rgb(128, 128, 128);
+}
+a:-webkit-any-link {
+    /* color: -webkit-link; */
+    cursor: pointer;
+    /* text-decoration: underline; */
+}
+/* 헤더의 메뉴 영역잡기 */
+
+.header.hMenu{
+    height: 100%;
+    padding:52px 0;
+}
+nav{
+    display:block;
+}
+
+.header .hMenu .menu {
+    position: absolute;
+    /* 가운데 정렬 */
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: rgb(255, 255, 255);
+}
+div{
+    margin:0;
+    padding:0;
+    display: block;
+    
+}
+.header .hMenu .menu .depth1 {
+    display: inline-block;
+    padding-left: 60px;
+    text-align: left;
+    vertical-align: top;
+}
+ul {
+    list-style: none outside;
+    /* margin-block-start: 1em; */
+    /* margin-block-end: 1em; */
+    /* margin-inline-start: 0px; */
+    margin-inline-end: 0px;
+    padding-inline-start: 10px;
+}
+.header .hMenu .menu .depth1>li {
+    float: left;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.header .hMenu .menu .depth1>li .dth1 {
+    position: relative;
+    margin-right: 85px;
+    padding: 0 10px;
+    color: #292929;
+    font-size: 20px;
+    line-height: 140px;
+    font-weight: 600;
+}
+.header .hMenu .menu .depth1 a {
+    display: inline-block;
+    vertical-align: top;
+}
+ul ul {
+    /* list-style-type: circle; */
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    
+}
+.header .hMenu .menu .depth2 {
+    /* 세부메뉴보이냐 안보이냐~ */
+    display: none;
+    padding: 35px 10px 45px;
+    
+
+}
+
+.header .hMenu .menu .depth2>li:first-child {
+    margin-top: 0;
+}
+
+.header .hMenu .menu .depth2>li {
+    margin-top: 15px;
+    font-weight: bold;
+    
+}
+.header .hMenu .menu .depth2>li .dth2 {
+    line-height: 1.6;
+    border-bottom: 1px solid transparent;
+}
+
+/* 첫번째줄 오른쪽부분 */
+form {
+    display: block;
+    /* margin-top: 0em; */
+}
+.header .hMenu .util {
+    position: relative;
+    float: right;
+    top:55px;
+}
+
+.header .hMenu .util .recruit {
+    display: inline-block;
+    width: 80px;
+    padding-top: 2px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 34px;
+    text-align: center;
+    background: #ffbc0d;
+    border-radius: 48px;
+}
+.header .hMenu .util .lang {
+    display: inline-block;
+    width: 80px;
+    padding-top: 2px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 34px;
+    text-align: center;
+    background: #264a36;
+    border-radius: 48px;
+}
+.topSearch {
+    display: inline-block;
+}
+.header .hMenu .util .srch {
+    margin-left: 26px;
+    width: 36px;
+    height: 36px;
+    text-indent: -9999px;
+    background: url(../images/ico_search.png) 0 0 no-repeat;
+
+}
+
+button, input[type='button'], input[type='submit'], input[type='reset'] {
+    cursor: pointer;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
+    border: 0;
+    vertical-align: middle;
+    background: none;
+}
