@@ -94,6 +94,7 @@ a:-webkit-any-link {
 .header.hMenu{
     height: 100%;
     padding:52px 0;
+    z-index: 1;
 }
 nav{
     display:block;
@@ -154,13 +155,7 @@ ul ul {
     margin-block-end: 0px;
     
 }
-.header .hMenu .menu .depth2 {
-    /* 세부메뉴보이냐 안보이냐~ */
-    display: none;
-    padding: 35px 10px 45px;
-    
 
-}
 
 .header .hMenu .menu .depth2>li:first-child {
     margin-top: 0;
@@ -231,4 +226,169 @@ button, input[type='button'], input[type='submit'], input[type='reset'] {
     border: 0;
     vertical-align: middle;
     background: none;
+}
+/* hover기능!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.header .hMenu .menu .depth1>li:hover .dth1:after{
+    content:" ";
+    position:absolute;
+    bottom:-3px;
+    left:0;
+    right:0;
+    border-bottom:3px solid #f5bd43
+}
+.header .hMenu .menu .depth2>li .dth2:hover{
+    color:#000;
+    border-bottom:1px 
+    solid #000
+}
+  
+  
+ .header .hMenu .menu .depth2 {
+     /* 세부메뉴보이냐 안보이냐~  */
+    display: none;
+    padding: 35px 10px 45px;
+
+
+ }
+
+ .header .hMenu .menu .depth1:hover .depth2{
+     display:block;
+ }
+
+ main {
+    height: 100vh;
+    position: relative;
+    top:140px;
+    /* background-color: #ffbc0d; */
+    z-index:-1;
+    
+    
+}
+
+main .wrapper2 {
+    justify-content: center;
+   
+}
+
+/* MAIN SLIDER */
+
+main .wrapper2 #slider {
+    width: 100%;
+    height: 540px;
+    overflow: hidden;
+    position: relative;
+    /* z-index:-2; */
+    
+}
+
+main .wrapper2 #slider .slide {
+    height:540px;
+    /* 이걸 안해줬더니 크기가 자동으로확대가 되었다! */
+    /* background-size: cover; */
+    background-position: center;
+    /* background-repeat 속성은 배경 이미지의 반복 방법을 지정합니다. 가로축 및 세로축을 따라 반복할 수 있고,
+     아예 반복하지 않을 수도 있습니다. */
+     /* 반복안함! */
+    background-repeat: no-repeat;
+    /* z-index:-1; */
+
+}
+
+main .wrapper2 #slider .slide1 {
+    background-image: url(../images/mcslide1.png);
+
+}
+
+main .wrapper2 #slider .slide2 {
+    background-image: url(../images/mcslide2.png);
+}
+
+main .wrapper2 #slider .slide3 {
+    background-image: url(../images/mcslide3.png);
+}
+
+main .wrapper2 #slider .slide4 {
+    background-image: url(../images/mcslide4.png);
+}
+
+main .wrapper2 #slider .slide5 {
+    background-image: url(../images/mcslide5.png);
+}
+
+
+
+main .wrapper2 #slider .slide__content {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .wrapper2 #slider .slide__content span {
+    font-size: 80px;
+    color: #F6F5F0;
+}
+
+/* SLIDER ARROW */
+
+main .wrapper2 #slider .material-icons {
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    font-size: 80px;
+    color: #F6F5F0;
+}
+
+main .wrapper2 #slider .arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    width: 0;
+    height: 0;
+}
+
+main .wrapper2 #slider .arrow--left {
+    left: 0px;
+}
+
+main .wrapper2 #slider .arrow--right {
+    right: 0px;
+}
+
+
+/* SECTION */
+
+.section {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* SPONSOR SECTION */
+
+section#sponsor .wrapper .grid {
+    display: grid;
+    display:absolute;
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
+    justify-content: center;
+}
+
+section#sponsor .wrapper .grid .circle {
+    width: 366px;
+    height: 438px;
+
+    border-radius: 20px;
+    background: #000;
+    color: #F6F5F0;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
