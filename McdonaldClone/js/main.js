@@ -1,9 +1,9 @@
 // 슬라이드 이미지 선택자
 const sliderImages = document.querySelectorAll('.slide')
 // 오른쪽 화살표 선택자
-const arrowRight = document.querySelector('.arrow--right')
+const arrowRight = document.querySelector('.ctrl.prev')
 // 왼쪽 화살표 선택자
-const arrowLeft = document.querySelector('.arrow--left')
+const arrowLeft = document.querySelector('.ctrl.next')
 // 현재 보여지는 슬라이드 번호
 let current = 0;
 
@@ -21,6 +21,7 @@ const reset = () => {
     // 슬라이드 이미지 모두 보이지 않는 상태로 설정
     sliderImages.forEach((el) => el.style.display = 'none')
     dots.forEach((el) => el.style.background = '#F6F5F0')
+    
 }
 
 // 자동 슬라이드 기능을 위한 함수
@@ -129,9 +130,9 @@ dot5.addEventListener("click", function(){
 })
 
 // 여섯번째 동그라미 클릭할 시 작동하는 익명의 함수
-dot6.addEventListener("click", function(){
-    reset()
-    current = 5
-    sliderImages[current].style.display = 'block';
-    dots[current].style.background = '#1107ff'
-})
+// dot6.addEventListener("click", function(){
+//     reset()
+//     current = 5
+//     sliderImages[current].style.display = 'block';
+//     dots[current].style.background = '#1107ff'
+// })

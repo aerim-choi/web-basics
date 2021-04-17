@@ -1,9 +1,41 @@
+/* 폰트적용!!!!!!!!!!!!!! */
+@import url(//db.onlinewebfonts.com/c/827d075b1538829cc0db75696e4d5fa2?family=Speedee);
+/* 밑에꺼를K로 바꾸었더니성공 */
+@font-face {font-family: "SpeedeeK"; src: url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.eot"); src: url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.woff") format("woff"), url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.svg#Speedee") format("svg"); }
 * {
     -webkit-text-size-adjust: none;
     /* -webkit-box-sizing: border-box; */
     /* -moz-box-sizing: border-box; */
     box-sizing: border-box;
 }
+
+@font-face {
+    font-family:SpeedeeK;
+    font-weight:400;
+    font-style:normal;
+    src: url(../font/Speedee_K_L.eot);
+    src: url(../font/Speedee_K_L.eot#iefix) format('embedded-opentype'),
+         url(../font/Speedee_K_L.woff) format('woff'),
+         url(../font/Speedee_K_L.ttf) format('truetype'),
+         url(../font/Speedee_K_L.svg#webfont) format('svg')}
+  @font-face {
+    font-family:SpeedeeK;
+    font-weight:500;
+    font-style:normal;
+    src: url(../font/Speede2019-11-13e_K_R.eot);
+    src: url(../font/Speedee_K_R.eot#iefix) format('embedded-opentype'),
+         url(../font/Speedee_K_R.woff) format('woff'),
+         url(../font/Speedee_K_R.ttf) format('truetype'),
+         url(../font/Speedee_K_R.svg#webfont) format('svg')}
+  @font-face {
+    font-family:SpeedeeK;
+    font-weight:600;
+    font-style:normal;
+    src: url(../font/Speedee_K_B.eot);
+    src: url(../font/Speedee_K_B.eot#iefix) format('embedded-opentype'),
+         url(../font/Speedee_K_B.woff) format('woff'),
+         url(../font/Speedee_K_B.ttf) format('truetype'),
+         url(../font/Speedee_K_B.svg#webfont) format('svg')}
 html {
     margin: 0;
     height: 100%;
@@ -12,9 +44,9 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
     margin: 0;
     padding: 0;
 }
-/* /* body */
+/* body */
 body, input, select, textarea, button, pre {
-    font-family: "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Arial, sans-serif;
+    font-family: SpeedeeK, "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Arial, sans-serif;
     color: rgb(128, 128, 128);
     font-size: 16px;
     font-weight: 500;
@@ -32,7 +64,7 @@ body {
     /* min-width는 width 속성의 사용값이 자신의 값보다 작아지는걸 방지합니다. */
     min-width: 1280px;
     min-height: 100%;
-    padding: 140px 0 230px;
+    /* padding: 140px 0 230px; */
 }
 /* 헤더영역 잡기 */
 .header {
@@ -44,7 +76,7 @@ body {
     min-width: 1280px;
     height: 141px;
     text-align: center;
-    border-bottom: 1px solid #ffbc0d;
+    border-bottom: 1px solid (128,128,128);
     background: #fff;
 }
 
@@ -63,7 +95,7 @@ body {
     /* 왼쪽부터흐르게! */
     float:left;
     /* 더 큰 z-index 값을 가진 요소가 작은 값의 요소 위를 덮습니다. */
-    z-index:1;
+    z-index:5;
 }
 .header.hLogo a{
     display:block;
@@ -94,7 +126,6 @@ a:-webkit-any-link {
 .header.hMenu{
     height: 100%;
     padding:52px 0;
-    z-index: 1;
 }
 nav{
     display:block;
@@ -108,6 +139,7 @@ nav{
     right: 0;
     text-align: center;
     background: rgb(255, 255, 255);
+    z-index:4;
 }
 div{
     margin:0;
@@ -143,7 +175,7 @@ li {
     color: #292929;
     font-size: 20px;
     line-height: 140px;
-    font-weight: 600;
+    font-weight: 630;
 }
 .header .hMenu .menu .depth1 a {
     display: inline-block;
@@ -163,8 +195,6 @@ ul ul {
 
 .header .hMenu .menu .depth2>li {
     margin-top: 15px;
-    font-weight: bold;
-    
 }
 .header .hMenu .menu .depth2>li .dth2 {
     line-height: 1.6;
@@ -180,6 +210,7 @@ form {
     position: relative;
     float: right;
     top:55px;
+    z-index:6;
 }
 
 .header .hMenu .util .recruit {
@@ -256,28 +287,25 @@ button, input[type='button'], input[type='submit'], input[type='reset'] {
  }
 
  main {
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
     top:140px;
-    /* background-color: #ffbc0d; */
-    z-index:-1;
-    
-    
-}
+    }
 
 main .wrapper2 {
-    justify-content: center;
-   
+    margin:0 auto;
+
 }
 
 /* MAIN SLIDER */
 
 main .wrapper2 #slider {
-    width: 100%;
     height: 540px;
+    /* 이걸해야지 다음이미지가 안보임 */
     overflow: hidden;
     position: relative;
-    /* z-index:-2; */
+    max-width: 1900px;
+    margin: 0 auto;
     
 }
 
@@ -290,7 +318,6 @@ main .wrapper2 #slider .slide {
      아예 반복하지 않을 수도 있습니다. */
      /* 반복안함! */
     background-repeat: no-repeat;
-    /* z-index:-1; */
 
 }
 
@@ -318,12 +345,13 @@ main .wrapper2 #slider .slide5 {
 
 
 main .wrapper2 #slider .slide__content {
-    width: 100%;
-    height: 60vh;
-    display: flex;
+    width: 1920px;
+    height: 540px;
+    /* display: flex; */
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    
 }
 
 main .wrapper2 #slider .slide__content span {
@@ -358,37 +386,182 @@ main .wrapper2 #slider .arrow--left {
 main .wrapper2 #slider .arrow--right {
     right: 0px;
 }
-
+main .wrapper2 #slider .ctrl {
+    position: absolute;
+    top: 50%;
+    width: 90px;
+    height: 90px;
+    margin-top: -45px;
+    overflow: hidden;
+    text-indent: -9999px;
+    background: url(../images/bg_swiper_new.png) 0 0 no-repeat;
+    z-index: 1;
+}
+main .wrapper2 #slider .ctrl.prev {
+    left: 0;
+}
+main .wrapper2 #slider .ctrl.next {
+    right: 0;
+    background-position: 0 -90px;
+}
 
 /* SECTION */
 
 .section {
     width: 100%;
-    height: 100vh;
+    /* vh 단위 vh=view height그래서 화면에다보이는거임 그래서 +버튼이 계속내려갔었음... */
+    /* height: 100vh; */
     justify-content: center;
     align-items: center;
 }
+.inner {
+    position: relative;
+    width: 1168px;
+    margin: 0 auto;
+    height: 1210px;
+}
+/* 타이틀 */
+.wrapper3{
+    padding: 30px 0 60px;
+    height:1179.98px;
+}
+section#tit{
+    margin: 0px 0px 60px;
+    color: #292929;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+}
 
-
-/* SPONSOR SECTION */
-
-section#sponsor .wrapper .grid {
+/*  GRID*/
+section#promotion .wrapper .grid {
     display: grid;
-    display:absolute;
     grid-template-columns: repeat(3, auto);
     gap: 30px;
     justify-content: center;
 }
 
-section#sponsor .wrapper .grid .circle {
+section#promotion .wrapper .grid .circle {
     width: 366px;
     height: 438px;
-
-    border-radius: 20px;
-    background: #000;
-    color: #F6F5F0;
+    box-shadow: 0 3px 4px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    background: #ffffff;
+    color: #000000;
     font-size: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   
+}
+
+section#promotion .wrapper .grid .circle .con{
+    padding: 24px 30px;
+}
+section#promotion .wrapper .grid .circle .con .tit{
+    display: -webkit-box;
+    max-height: 118px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 18px;
+    color: #292929;
+    font-weight: 500;
+    line-height: 1.7;
+    font-family: SpeedeeK,"Malgun Gothic", "맑은 고딕", Dotum, 돋움, Arial, sans-serif;
+}
+/* MORE */
+
+.inner .btnMore {
+    margin-top: 80px;
+    text-align: center;
+}
+
+/* FOOTER */
+footer.footer{
+    top:1920.2px;
+    position: absolute;
+    width:100%;
+    height:254.512px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+    background: #292929;
+
+}
+
+.footer .footArea {
+    /* 위에서내려 */
+    padding: 45px 0 55px;
+    text-align: left;
+    width: 1168px;
+    /* 가운데 정렬 */
+    margin: 0 auto;
+}
+
+.footer .fUtil {
+    float: left;
+    width: 190px;
+    
+}
+/* futil부분 li사이 marigin */
+.footer .fUtil li+li {
+    margin-top: 5px;
+}
+/* fUtil부분 글자색설정 */
+.footer .fUtil .privacy a{
+    color:yellow;
+}
+/* fUtil부분 글자색 설정 */
+.footer .fUtil a{
+    color: #ffffff;
+} 
+/* fInfo 글자설정 */
+.footer .fInfo {
+    float: left;
+    font-weight: 400;
+    /* opacity CSS 속성은 요소의 불투명도를 설정합니다.  */
+    opacity: .6;
+}
+.footer .fInfo .info li+li {
+    margin-top: 5px;
+}
+.footer .fSns {
+    float: right;
+}
+.footer .fSns li {
+    float: left;
+    margin-left: 20px;
+}
+.footer .fSns a.fb {
+    background-position: 0 0;
+}
+
+.footer .fSns a.ig {
+    background-position: 0 -40px;
+}
+.footer .fSns a.yt {
+    background-position: 0 -80px;
+}
+.footer .fSns a.ks {
+    background-position: 0 -120px;
+}
+.footer .fSns a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    text-indent: -9999px;
+    background: url(../images/ico_sns.png) 0 0 no-repeat;
+}
+.footer .fSns .web_accessibility a {
+    width: 100px;
+    height: 66px;
+    text-indent: 0;
+    background: none;
+}
+.footer .fSns .web_accessibility a img {
+    width: 100%;
+}
+.footer .fSns .web_accessibility {
+    margin-top: -5px;
 }
