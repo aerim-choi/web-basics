@@ -16,6 +16,8 @@ const dot4 = document.querySelector('.dot4')
 const dot5 = document.querySelector('.dot5')
 
 
+
+
 // 슬라이드 이미지 리셋
 const reset = () => {
     // 슬라이드 이미지 모두 보이지 않는 상태로 설정
@@ -40,6 +42,7 @@ const autoSlide = () => {
     // 슬라이드 이미지 배열에서 index값이 current인 이미지를 보이는 상태로 설정 
     sliderImages[current].style.display = 'block'
     dots[current].style.background = '#1107ff'
+    
 }
 
 // 수동 슬라이드를 위한 함수들
@@ -89,50 +92,25 @@ arrowRight.addEventListener('click', function() {
     slideRight()
 })
 
-// 첫번째 동그라미 클릭할 시 작동하는 익명의 함수
-dot1.addEventListener("click", function(){
-    reset()
-    current = 0
-    sliderImages[current].style.display = 'block';
-    dots[current].style.background = '#1107ff'
+
+
+
+// SCROLL TO TOP
+const scrollToTop = () => {
+
+    window.scroll({top: 0, left: 0, behavior: 'smooth'});
+}
+
+// scroll to top 버튼 선택자
+const scrollToTopBtn = document.querySelector('.btnTop.fixedB')
+
+// 윈도우에 스크롤 이벤트가 발생할 시 작동하는 익명의 함수
+window.addEventListener("scroll", function() {
+    // 만약 스크롤이 발생하면,
+    // scroll to top 버튼을 보이게 하고,
+    // 아니라면 버튼을 보이지 않게 함
+    window.scrollY > 0
+    ? scrollToTopBtn.style.display = 'block'
+    : scrollToTopBtn.style.display = 'none'
 })
 
-// 두번째 동그라미 클릭할 시 작동하는 익명의 함수
-dot2.addEventListener("click", function(){
-    reset()
-    current = 1
-    sliderImages[current].style.display = 'block';
-    dots[current].style.background = '#1107ff'
-})
-
-// 세번째 동그라미 클릭할 시 작동하는 익명의 함수
-dot3.addEventListener("click", function(){
-    reset()
-    current = 2
-    sliderImages[current].style.display = 'block';
-    dots[current].style.background = '#1107ff'
-})
-
-// 네번째 동그라미 클릭할 시 작동하는 익명의 함수
-dot4.addEventListener("click", function(){
-    reset()
-    current = 3
-    sliderImages[current].style.display = 'block';
-    dots[current].style.background = '#1107ff'
-})
-
-// 다섯번째 동그라미 클릭할 시 작동하는 익명의 함수
-dot5.addEventListener("click", function(){
-    reset()
-    current = 4
-    sliderImages[current].style.display = 'block';
-    dots[current].style.background = '#1107ff'
-})
-
-// 여섯번째 동그라미 클릭할 시 작동하는 익명의 함수
-// dot6.addEventListener("click", function(){
-//     reset()
-//     current = 5
-//     sliderImages[current].style.display = 'block';
-//     dots[current].style.background = '#1107ff'
-// })

@@ -21,7 +21,7 @@
 	<link href="//db.onlinewebfonts.com/c/827d075b1538829cc0db75696e4d5fa2?family=Speedee" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-	<!-- 메뉴만들기 -->
+	<!-- HEADER 메뉴만들기 -->
     <div class="wrapper">
 		<header class="header" style="margin-top:0px;">
 			<div class="headArea">
@@ -32,7 +32,7 @@
 						<img src="https://www.mcdonalds.co.kr/kor/images/common/logo.png" alt="맥도날드">
 					</a>
 				</strong>
-				<!--  문서의 부분 중 현재 페이지 내, 또는 다른 페이지로의 링크를 보여주는 구획을 나타냅니다. 자주 쓰이는 예제는 메뉴, 목차, 색인입니다. -->
+				<!--  nav 문서의 부분 중 현재 페이지 내, 또는 다른 페이지로의 링크를 보여주는 구획을 나타냅니다. 자주 쓰이는 예제는 메뉴, 목차, 색인입니다. -->
 				<!-- 메뉴라서 nav를 쓴것이다. -->
 				<nav class="hMenu" >
 					<div class="menu">
@@ -85,6 +85,8 @@
 							</li>
 						</ul>		
 					</div>
+					<!-- HEADER 오른쪽 상단  -->
+					<!-- HTML <form> 요소는 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획을 나타냅니다. -->
 					<form id="commonSearchForm" method="post">
 						<div class="util">
 							<a href="https://www.mcdonalds.co.kr/kor/story/people/recruit.do" class="recruit" title="인재채용으로 이동">RECRUIT</a>
@@ -96,17 +98,16 @@
 					</form>
 				</nav>
 			</div>
+		<!-- //header -->
 		</header>
 	</div>
-		<!-- //header -->
-		<!-- 본문  -->
-		<!-- 슬라이더 만들기 -->
+	
+	<!-- 본문  -->
 	<main id="about">
+		<!-- 슬라이더 -->
 		<div class="wrapper2">
 			<div id="slider">
-				<!-- <div class="material-icons arrow--left">
-					arrow_left
-				</div> -->
+				<!-- 왼쪽 버튼 -->
 				<button type="button" class="ctrl prev" tabindex="0" role="button" aria-label="Previous slide">이전</button>
 				<div class="slide slide1" onclick="location.href='http://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=317&utm_medium=Corp_site&utm_source=Main_banner&utm_campaign=0401_FOF'" style="cursor:pointer;">
 				</div>
@@ -118,21 +119,16 @@
 				</div>
 				<div class="slide slide5" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=318&utm_medium=Corp_site&utm_source=Main_banner&utm_campaign=0401_Chiller'" style="cursor:pointer;">
 				</div>
-				<!-- <div class="material-icons arrow--right">
-					arrow_right
-				</div> -->
+				<!-- 오른쪽 버튼 -->
 				<button type="button" class="ctrl next" tabindex="0" role="button" aria-label="Next slide">다음</button>
-				<div class="dots">
-					<div class="dot dot1"></div>
-					<div class="dot dot2"></div>
-					<div class="dot dot3"></div>
-					<div class="dot dot4"></div>
-					<div class="dot dot5"></div>
-					<div class="dot dot6"></div>
+				<div class="indicator">
+					<span role="text" class="timer"><span class="bar" style="width: 86.2975%; overflow: hidden;"></span></span>
+					<button type="button" class="play pause">정지</button><!-- 재생표시 <button type="button" class="play">재생</button> -->
 				</div>
-				
+			
 			</div>
 		</div>
+		<!-- 본문 내용 -->
 		<div class="wrapper3">
 			<div class="inner">
 				<section id="tit">
@@ -142,51 +138,75 @@
 					<div class="wrapper">
 						<div class="grid">
 							<!-- 위만 동그랗게 border-radius를 위만 설정하기! -->
-							<div class="circle circle1">
+							<div class="circle circle1" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=317&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0401_FOF'" style="cursor:pointer;">
 								<img style="border-radius:10px 10px 0px 0px;" src="/images/grid1.png" alt="신선한 맛 가득 담아 알래스카에서 왔다!필레 오 피쉬 출시!" >
 								<div class="con">
 									<strong class="tit">신선한 맛 가득 담아 알래스카에서 왔다!<br>필레 오 피쉬 출시!</strong>
 								</div>
 							</div>
-							<div class="circle circle2">
+							<div class="circle circle2" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=320&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0408_Strawberry'" style="cursor:pointer;">
 								<img style="border-radius:10px 10px 0px 0px;" src="/images/grid2.png" alt="스트로베리 2종 아이스크림 출시!">
 								<div class="con">
 									<strong class="tit">스트로베리 2종 아이스크림 출시!</strong>
 								</div>
 							</div>
-							<div class="circle circle3">
+							<div class="circle circle3" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=318&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0401_Chiller'" style="cursor:pointer;">
 								<img style="border-radius:10px 10px 0px 0px;" src="images/grid3.png" alt="제주 한라봉 칠러 &amp; 애플망고 칠러 출시!">
 								<div class="con">
 									<strong class="tit">제주 한라봉 칠러 &amp; 애플망고 칠러 출시!</strong>
 								</div>
 							</div>
-							<div class="circle circle4">
+							<div class="circle circle4" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=313&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0311_HappySnack'" style="cursor:pointer;">
 								<img style="border-radius:10px 10px 0px 0px;" src="images/grid4.png" alt="모두가 해피한 스낵 할인">
 								<div class="con">
 									<strong class="tit">모두가 해피한 스낵 할인</strong>
 								</div>
 							</div>
-							<div class="circle circle5">
+							<div class="circle circle5" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=312&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0225_McLunch'" style="cursor:pointer;">
 								<img style="border-radius:10px 10px 0px 0px;" src="images/grid5.png" alt="7가지 최애버거 맥런치 출시!">
 								<div class="con">
 									<strong class="tit">7가지 최애버거 맥런치 출시!</strong>
 								</div>
 							</div>
-							<div class="circle circle6">
+							<div class="circle circle6" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=312&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0225_SpecialSet'" style="cursor:pointer;">
 								<img style="border-radius:10px 10px 0px 0px;" src="images/grid6.png" alt="빅맥 스페셜 세트&amp;상하이 버거 스페셜 세트 출시!">
 								<div class="con">
 									<strong class="tit">빅맥 스페셜 세트&amp;<br>상하이 버거 스페셜 세트 출시!</strong>
 								</div>
 							</div>
+							<div class="dots">
+								<div class="dot dot1"></div>
+								<div class="dot dot2"></div>
+								<div class="dot dot3"></div>
+								<div class="dot dot4"></div>
+								<div class="dot dot5"></div>
+								<div class="dot dot6"></div>
+							</div>
 						</div>
+
 					</div>
 				</section>
+				<!-- 더보기 -->
 				<div class="btnMore" id="btnMore">
 					<img src="images/btn_more.png">
 				</div>
 			</div>
+			<!--오른쪽배너 -->
+			<div class="aside">
+				<a href="https://www.mcdelivery.co.kr/kr/" class="goDelivery" target="_blank" title="새창 열림">Mcdelivery</a>
+			</div>
+			<button type="button" class="btnTop" onclick="scrollToTop()">맨 위로 가기</button>
+			<!-- 배너고정(미완성) -->
+			<!-- <div class="aside fixedB">
+				<a href="https://www.mcdelivery.co.kr/kr/" class="goDelivery" target="_blank" title="새창 열림">Mcdelivery</a>
+			</div>
+			<button type="button" class="btnTop fixedB" onclick="scrollToTop()">맨 위로 가기</button> -->
 		</div>
+		
+
 	</main>
+	
+	<!-- FOOTER -->
 	<footer class="footer">
 		<div class="footArea">
 			<ul class="fUtil">
@@ -221,6 +241,5 @@
 			</div>
 		</div>	
 	</footer>
-	
 </body>
 </html>

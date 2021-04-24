@@ -1,4 +1,4 @@
-/* 폰트적용!!!!!!!!!!!!!! */
+/* 폰트적용 */
 @import url(//db.onlinewebfonts.com/c/827d075b1538829cc0db75696e4d5fa2?family=Speedee);
 /* 밑에꺼를K로 바꾸었더니성공 */
 @font-face {font-family: "SpeedeeK"; src: url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.eot"); src: url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.woff") format("woff"), url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.svg#Speedee") format("svg"); }
@@ -44,7 +44,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
     margin: 0;
     padding: 0;
 }
-/* body */
+/* BODY */
 body, input, select, textarea, button, pre {
     font-family: SpeedeeK, "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Arial, sans-serif;
     color: rgb(128, 128, 128);
@@ -57,15 +57,37 @@ body {
     background: #fff;
     word-wrap: break-word;
     word-break: keep-all;
-} */
-.wrapper {
-    overflow: hidden;
-    position: relative;
-    /* min-width는 width 속성의 사용값이 자신의 값보다 작아지는걸 방지합니다. */
-    min-width: 1280px;
-    min-height: 100%;
-    /* padding: 140px 0 230px; */
 }
+img {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    vertical-align: top;
+}
+
+form, fieldset, img, input, button {
+    border: 0 none;
+    background: none;
+}
+a{
+    text-decoration: none;
+    color:rgb(128, 128, 128);
+}
+a:-webkit-any-link {
+    /* color: -webkit-link; */
+    cursor: pointer;
+    /* text-decoration: underline; */
+}
+button, input[type='button'], input[type='submit'], input[type='reset'] {
+    cursor: pointer;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
+    border: 0;
+    vertical-align: middle;
+    background: none;
+}
+/* HEADER*/
 /* 헤더영역 잡기 */
 .header {
     position: absolute;
@@ -100,37 +122,16 @@ body {
 .header.hLogo a{
     display:block;
 }
-/* 이미지 집어넣기 */
-img {
-    margin: 0;
-    padding: 0;
-    line-height: 0;
-    vertical-align: top;
-}
 
-form, fieldset, img, input, button {
-    border: 0 none;
-    background: none;
-}
-a{
-    text-decoration: none;
-    color:rgb(128, 128, 128);
-}
-a:-webkit-any-link {
-    /* color: -webkit-link; */
-    cursor: pointer;
-    /* text-decoration: underline; */
-}
 /* 헤더의 메뉴 영역잡기 */
-
 .header.hMenu{
     height: 100%;
     padding:52px 0;
 }
+/* 헤더의 메뉴 만들기 */
 nav{
     display:block;
 }
-
 .header .hMenu .menu {
     position: absolute;
     /* 가운데 정렬 */
@@ -145,7 +146,6 @@ div{
     margin:0;
     padding:0;
     display: block;
-    
 }
 .header .hMenu .menu .depth1 {
     display: inline-block;
@@ -155,9 +155,6 @@ div{
 }
 ul {
     list-style: none outside;
-    /* margin-block-start: 1em; */
-    /* margin-block-end: 1em; */
-    /* margin-inline-start: 0px; */
     margin-inline-end: 0px;
     padding-inline-start: 10px;
 }
@@ -182,12 +179,10 @@ li {
     vertical-align: top;
 }
 ul ul {
-    /* list-style-type: circle; */
     margin-block-start: 0px;
     margin-block-end: 0px;
     
 }
-
 
 .header .hMenu .menu .depth2>li:first-child {
     margin-top: 0;
@@ -249,16 +244,8 @@ form {
 
 }
 
-button, input[type='button'], input[type='submit'], input[type='reset'] {
-    cursor: pointer;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    -webkit-appearance: none;
-    border: 0;
-    vertical-align: middle;
-    background: none;
-}
-/* hover기능!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* hover기능!*/
 .header .hMenu .menu .depth1>li:hover .dth1:after{
     content:" ";
     position:absolute;
@@ -278,8 +265,6 @@ button, input[type='button'], input[type='submit'], input[type='reset'] {
      /* 세부메뉴보이냐 안보이냐~  */
     display: none;
     padding: 35px 10px 45px;
-
-
  }
 
  .header .hMenu .menu .depth1:hover .depth2{
@@ -287,7 +272,7 @@ button, input[type='button'], input[type='submit'], input[type='reset'] {
  }
 
  main {
-    /* height: 100vh; */
+    height: 100vh;
     position: relative;
     top:140px;
     }
@@ -405,6 +390,50 @@ main .wrapper2 #slider .ctrl.next {
     background-position: 0 -90px;
 }
 
+main .wrapper2 #slider .indicator {
+    position: absolute;
+    left: 50%;
+    bottom: 27px;
+    width: 366px;
+    margin-left: -183px;
+    padding-left: 66px;
+}
+main .wrapper2 #slider .indicator .timer{
+    display:block;
+    position:relative;
+    width:300px;
+    height:6px;
+    overflow:hidden;
+    text-indent:-9999px;
+    /* vertical-align: top; */
+    border-radius: 6px;
+    background:#fff;
+
+}
+main .wrapper2 #slider .indicator .timer.bar{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    border-radius: 6px;
+    background-color: #ffbc0d;
+
+}
+main .wrapper2 #slider .indicator .play.pause{
+    background-position:-92px -36px;
+}
+main .wrapper2 #slider .indicator .play{
+    position:absolute;
+    top:50%;
+    left:0;
+    width:36px;
+    height:36px;
+    margin-top:-18px;
+    overflow:hidden;
+    text-indent:-9999px;
+    background:url(../images/bg_swiper_new.png) -92px 0 no-repeat;
+}
+
 /* SECTION */
 
 .section {
@@ -423,7 +452,7 @@ main .wrapper2 #slider .ctrl.next {
 /* 타이틀 */
 .wrapper3{
     padding: 30px 0 60px;
-    height:1179.98px;
+    height:1271px;
 }
 section#tit{
     margin: 0px 0px 60px;
@@ -433,14 +462,13 @@ section#tit{
     line-height: 1;
 }
 
-/*  GRID*/
+/* GRID*/
 section#promotion .wrapper .grid {
     display: grid;
     grid-template-columns: repeat(3, auto);
     gap: 30px;
     justify-content: center;
 }
-
 section#promotion .wrapper .grid .circle {
     width: 366px;
     height: 438px;
@@ -451,7 +479,6 @@ section#promotion .wrapper .grid .circle {
     font-size: 32px;
    
 }
-
 section#promotion .wrapper .grid .circle .con{
     padding: 24px 30px;
 }
@@ -466,13 +493,54 @@ section#promotion .wrapper .grid .circle .con .tit{
     color: #292929;
     font-weight: 500;
     line-height: 1.7;
-    font-family: SpeedeeK,"Malgun Gothic", "맑은 고딕", Dotum, 돋움, Arial, sans-serif;
+    font-family: SpeedeeK;
 }
 /* MORE */
-
 .inner .btnMore {
-    margin-top: 80px;
+    margin-top: 50px;
     text-align: center;
+}
+
+/* 오른쪽 delivery banner */
+.aside {
+    position: fixed;
+    bottom: 110px;
+    left: 49%;
+    margin: 0 0 0 635px;
+    z-index: 10;
+}
+/* .aside.fixedB {
+    position: absolute;
+    bottom: 378px;
+} */
+.aside .goDelivery {
+    display: block;
+    width: 110px;
+    height: 113px;
+    overflow: hidden;
+    text-indent: -9999px;
+    background: url(../images/btn_delivery_01.png) 0 0 no-repeat;
+    background-size: cover;
+}
+
+
+/*오른쪽 SCROLL TO TOP */
+
+/* .btnTop.fixedB {
+    position: absolute;
+    bottom: 310px;
+} */
+.btnTop {
+    position: fixed;
+    bottom: 45px;
+    left: 50%;
+    width: 43px;
+    height: 40px;
+    margin: 0 0 0 635px;
+    background: url(../images/btn_top.png) 0 14px no-repeat;
+    text-indent: -9999px;
+    font-size: 1px;
+    z-index: 10;
 }
 
 /* FOOTER */
@@ -486,14 +554,25 @@ footer.footer{
     line-height: 1.6;
     text-align: center;
     background: #292929;
+    
 
 }
-
+/* FOOTER */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.footArea {
+    width: 1168px;
+    margin: 0 auto;
+}
 .footer .footArea {
     /* 위에서내려 */
     padding: 45px 0 55px;
     text-align: left;
-    width: 1168px;
+    /* width: 1168px; */
     /* 가운데 정렬 */
     margin: 0 auto;
 }
@@ -525,6 +604,7 @@ footer.footer{
 .footer .fInfo .info li+li {
     margin-top: 5px;
 }
+/* fsns설정 */
 .footer .fSns {
     float: right;
 }
@@ -565,3 +645,8 @@ footer.footer{
 .footer .fSns .web_accessibility {
     margin-top: -5px;
 }
+
+
+
+
+
