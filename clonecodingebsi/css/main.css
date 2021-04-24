@@ -77,6 +77,149 @@ area {
     bottom: 0;
     margin-left: -100px;
 }
+/* header-headerSelect */
+
+.gradeSelect.reserve {
+    top: 48px;
+    height: 55px;
+}
+.gradeSelect {
+    position: absolute;
+    top: 71px;
+    left: 0;
+    width: 257px;
+    height: 32px;
+    z-index: 99;
+}
+fieldset {
+    display: block;
+    border: 0;
+}
+legend {
+    display: none !important;
+}
+
+legend {
+    display: block;
+    padding-inline-start: 2px;
+    padding-inline-end: 2px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+user agent stylesheet
+fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-style: groove;
+    border-color: threedface;
+    border-image: initial;
+}
+.gradeSelect > fieldset div {
+    float: left;
+}
+
+/* 고1 */
+.gradeSelect > fieldset input {
+    display: none;
+}
+select, input, textarea {
+    vertical-align: middle;
+}
+
+
+
+input[type="radio" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 0px 5px;
+    padding: initial;
+    border: initial;
+}
+
+.gradeSelect > fieldset input {
+    display: none;
+}
+select, input, textarea {
+    vertical-align: middle;
+}
+.gradeSelect.reserve > fieldset label[for="selectGo1"] {
+    background-position: 0 0;
+}
+.gradeSelect.reserve > fieldset label {
+    height: 55px;
+    background: url(http://image.ebsi.co.kr/ebsi/images/reNskin2018/common/btn_class_reserve.png) no-repeat;
+}
+.gradeSelect > fieldset label[for="selectGo1"] {
+    background-position: 0 0;
+}
+.gradeSelect > fieldset label {
+    display: block;
+    top: 0;
+    width: 40px;
+    height: 32px;
+    text-indent: -9999px;
+    cursor: pointer;
+    background: url(http://image.ebsi.co.kr/ebsi/images/reNskin2018/common/btn_class.png) no-repeat;
+}
+/* 고2 */
+.gradeSelect.reserve > fieldset label[for="selectGo2"] {
+    background-position: -64px 0;
+}
+.gradeSelect.reserve > fieldset label {
+    height: 55px;
+    background: url(http://image.ebsi.co.kr/ebsi/images/reNskin2018/common/btn_class_reserve.png) no-repeat;
+}
+.gradeSelect > fieldset label[for="selectGo2"] {
+    background-position: -64px 0;
+}
+.gradeSelect > fieldset label {
+    display: block;
+    top: 0;
+    width: 40px;
+    height: 32px;
+    text-indent: -9999px;
+    cursor: pointer;
+    background: url(http://image.ebsi.co.kr/ebsi/images/reNskin2018/common/btn_class.png) no-repeat;
+}
+/* 고3 */
+.gradeSelect.reserve > fieldset input:checked + label[for="selectGo3"] {
+    background-position: -132px -55px;
+}
+.gradeSelect > fieldset input:checked + label[for="selectGo3"] {
+    background-position: -132px -32px;
+}
+.gradeSelect.reserve > fieldset label[for="selectGo3"] {
+    width: 94px;
+    background-position: -132px 0;
+}
+.gradeSelect.reserve > fieldset label {
+    height: 55px;
+    background: url(http://image.ebsi.co.kr/ebsi/images/reNskin2018/common/btn_class_reserve.png) no-repeat;
+}
+.gradeSelect > fieldset label[for="selectGo3"] {
+    width: 94px;
+    background-position: -132px 0;
+}
+.gradeSelect > fieldset label {
+    display: block;
+    top: 0;
+    width: 40px;
+    height: 32px;
+    text-indent: -9999px;
+    cursor: pointer;
+    background: url(http://image.ebsi.co.kr/ebsi/images/reNskin2018/common/btn_class.png) no-repeat;
+}
 
 /* header 디데이글씨 */
 .d-day, .d-day * {
@@ -103,3 +246,5 @@ em, address, i {
     font-weight: bold;
     color: #333;
 }
+
+

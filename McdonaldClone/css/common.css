@@ -543,8 +543,8 @@ section#promotion .wrapper .grid .circle .con .tit{
     z-index: 10;
 }
 
-/* FOOTER */
-footer.footer{
+
+ footer.footer{
     top:1920.2px;
     position: absolute;
     width:100%;
@@ -556,26 +556,20 @@ footer.footer{
     background: #292929;
     
 
-}
-/* FOOTER */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
+} 
+ 
 .footArea {
     width: 1168px;
     margin: 0 auto;
-}
+} 
 .footer .footArea {
     /* 위에서내려 */
-    padding: 45px 0 55px;
-    text-align: left;
-    /* width: 1168px; */
+    padding: 45px 0 55px; 
+    text-align: left; 
+    /* width: 1168px;  */
     /* 가운데 정렬 */
-    margin: 0 auto;
-}
+     margin: 0 auto;
+} 
 
 .footer .fUtil {
     float: left;
@@ -595,12 +589,12 @@ footer {
     color: #ffffff;
 } 
 /* fInfo 글자설정 */
+ /* opacity CSS 속성은 요소의 불투명도를 설정합니다.  */
 .footer .fInfo {
     float: left;
     font-weight: 400;
-    /* opacity CSS 속성은 요소의 불투명도를 설정합니다.  */
     opacity: .6;
-}
+} 
 .footer .fInfo .info li+li {
     margin-top: 5px;
 }
@@ -645,8 +639,6 @@ footer {
 .footer .fSns .web_accessibility {
     margin-top: -5px;
 }
-
-
 
 
 

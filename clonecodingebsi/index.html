@@ -26,8 +26,10 @@
     <link rel="shortcut icon" href="http://image.ebsi.co.kr/ebsi/images/favi_ebsi.ico" type="image/x-ico">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/innerwrap.css">
-    <!-- 기본브라우저를 reset -->
+    <link rel="stylesheet" href="./css/gradeSelect reserve.css">
+    <!--기본 브라우저 리셋  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
 </head>
 <body>
     <div id="wrap" class="renewal2018 renewa2019 go3 renewal2020">
@@ -45,12 +47,14 @@
             </div>
             <div class="globalMenuWrap">
                 <div class="innerWrap">
+                    <!-- 3번째줄 왼쪽 -->
                     <ul class="familySiteLink">
                         <li><a href="http://ebsmap.ebsi.co.kr/xip/index.do?hitCountPage=ace" target="_blank" title="진단코칭 사이트로 이동">진단코칭</a></li>
                         <li><a href="http://u.ebsi.co.kr/ebsiapp/main/main.do?hitCountPage=ace" target="_blank" title="듀냐공감 사이트로 이동">듀냐공감</a></li>
                         <li><a href="http://teacher.ebsi.co.kr/ercapp/main.do?hitCountPage=ace" target="_blank" title="교사지원센터 사이트로 이동"> 교사지원센터</a></li>
                     </ul>
-                    <ul class="personalMenuLink">
+                    <!-- 3번째줄 오른쪽 -->
+                    <ul class="personalMenuLink"> 
                     <!-- <li><a href="/ebs/pot/potm/retrieveMyEbsMain.ebs?Clickz=G001&hitCountPage=ace" title="마이페이지로 이동">마이페이지</a></li> -->
                          <li><a href="https://sso.ebs.co.kr/idp/join/intro.jsp?returnUrl=http://www.ebsi.co.kr&amp;userinfoUrl=http://www.ebsi.co.kr/ebs/pot/potl/RegistAdditionalInformationForm.ebs" title="회원가입으로 이동">회원가입</a></li>
                         <li><a href="#none;" title="로그인 화면으로 이동" onclick="ctGoLoginPage();">로그인</a></li>					
@@ -82,11 +86,31 @@
                 <p class="d-day" style="position:absolute;left:50%;top:80px;margin-left:-75px;width:150px;z-index:999;">2022 수능 
                     <i>D</i>-<em>224</em>
                 </p>
+                <!-- 학년별 선택 -->
+                <div class="gradeSelect reserve">
+                    <fieldset>
+                        <legend>학년 설정</legend>
+                        <div><input type="radio" id="selectGo1" name="gradeSelect1" value="high1" onclick="saveGrade();"><label for="selectGo1">예비 고1</label></div>
+                        <div><input type="radio" id="selectGo2" name="gradeSelect1" value="high2" onclick="saveGrade();"><label for="selectGo2">예비 고2</label></div>
+                        <div><input type="radio" id="selectGo3" name="gradeSelect1" value="high3" onclick="saveGrade();" checked="checked"><label for="selectGo3">예비 고3</label></div>
+                    </fieldset>
+                    <button type="button" class="btnSetClass" onclick="setGradePop();">설정</button>
+                    <!-- 학년 설정 레이어 --><div class="layerWrap layerClass" id="layerClass" style="display:none;">
+                        <div class="layerInner">
+                            <h1><em>학년 설정</em> 안내</h1> 
+                            <button type="button" class="btnClose">닫기</button>
+                            <div class="layerContents">
+                                <strong>EBSi 국가대표 고교강의 EBSi에 오신 것을 환영합니다.</strong>학년을 선택하면 브라우저에 쿠키로 저장되어<br>재접속 시 선택하신 학년으로 연결됩니다. <br>(인터넷 브라우저 쿠키 삭제 전까지 유지됩니다.)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
 
 
-
+        <!-- 헤더닫기div -->
         </div>
     
     

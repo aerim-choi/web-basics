@@ -1,0 +1,27 @@
+/* 폰트적용!!!!!!!!!!!!!! */
+@import url(//db.onlinewebfonts.com/c/827d075b1538829cc0db75696e4d5fa2?family=Speedee);
+/* 밑에꺼를K로 바꾸었더니성공 */
+@font-face {font-family: "SpeedeeK"; src: url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.eot"); src: url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.woff") format("woff"), url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.svg#Speedee") format("svg"); }
+/* COMMON */
+body{
+    font-family:SpeedeeK, "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Arial, sans-serif;
+}
+/* HEADER */
+.header.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-width: 1280px;
+    height: 141px;
+    text-align: center;
+    border-bottom: 1px solid #ffbc0d;
+    background: rgb(207, 0, 162);
+}
+.headerArea{
+    /* 화면에 꽉차게 보이고싶을때 height:100%를 쓴다고한다 */
+   width:1280px;
+   height: 100%;
+   background-color: aquamarine; 
+}
