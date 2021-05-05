@@ -1,0 +1,55 @@
+/* COMMON */
+.inner{
+    position: relative;
+    width:960px;
+    height:100%;
+    margin: 0 auto;
+    
+}
+.material-icons{
+    font-size:50px;
+}
+/* HEADER */
+header{
+    width:100%;
+    background: #000;
+    height: 80px;
+    color:#fff;
+}
+header > .inner{
+    display:flex;
+    align-items: center;
+    /* 얘가 쓸수있는 전체넓이에서 요소와요소사이를 최대한 넓혀준다. */
+    justify-content:space-between;
+}
+/* 햄버거아이콘 안보이게해줘 */
+header #hamburger_icon{
+    display: none;
+}
+header ul.menu li{
+    float:left;
+    font-size: 50px;
+    cursor:pointer;
+    padding-right: 2rem;
+    
+}
+header ul.menu li:last-child{
+    /* d는 옆에 있을 친구가 없는데 padding-right줄필요가 없겠죠 */
+    padding-right: 0rem;
+}
+header ul.sns_wrapper li {
+    float:left;
+    padding-right: 2rem;;
+}
+
+header ul.sns_wrapper li:last-child{
+    padding-right: 0rem;
+}
+header ul.sns_wrapper li svg{
+    width:50px;
+    height:50px;
+}
+/* 네비게이션 안보고싶어 */
+nav{
+    display: none;
+}

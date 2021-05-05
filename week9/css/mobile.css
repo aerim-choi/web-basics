@@ -1,0 +1,90 @@
+/* COMMON */
+.inner{
+    position: relative;
+    /* width:960px; */
+    width:70%;
+    height:100%;
+    margin: 0 auto;
+    
+}
+.material-icons{
+    font-size:50px;
+}
+/* HEADER */
+header{
+    width:100%;
+    background: #000;
+    height: 80px;
+    color:#fff;
+    z-index: 2;
+    position: relative;
+}
+header>.inner {
+    display:flex;
+    align-items: center;
+    /* 얘가 쓸수있는 전체넓이에서 요소와요소사이를 최대한 넓혀준다. */
+    justify-content:space-between;
+}
+/* 로고 안보이게해줘 */
+header .logo{
+    display: none;
+}
+header #hamburger_icon{
+    cursor:pointer;
+}
+/* 메뉴 안보고 싶어 */
+header ul.menu{
+    display: none;
+}
+
+
+
+
+/* NAV */
+nav{
+    width:100%;
+    height: 50%;
+    background: #000;
+    position: absolute;
+    /* header요소 80px만큼 떨어져서 */
+    top:80px;
+    transform:translateY(-100%);
+    transition: .4s ease;
+    z-index:1;
+    padding: 4rem 0;
+}
+nav .inner{
+    height: 100%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+   
+}
+nav ul.menu {
+    width:100%;
+}
+nav ul.menu li{
+    color:#fff;
+    font-size:30px;
+    padding:20px;
+    border-bottom: 1px solid #fff;
+}
+
+nav ul.sns_wrapper{
+    /* 옆으로나열 */
+    display: flex;
+    width:80%;
+    justify-content: space-between;
+    position:absolute;
+    bottom:0;
+    
+}
+/* svg는 이걸 꼭 너비랑 높이를 꼭 설정해줘야 보인다. */
+nav ul.sns_wrapper li svg{
+    width:50px;
+    height:50px;
+}
+/* sns담당하는건 안보고싶어 */
+header ul.sns_wrapper{
+    display: none;
+}
