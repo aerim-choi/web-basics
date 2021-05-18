@@ -1,0 +1,169 @@
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    min-width: 1280px;
+    min-height: 100%;
+    padding: 140px 0 230px;
+}
+/* 폰트적용 */
+@import url(//db.onlinewebfonts.com/c/827d075b1538829cc0db75696e4d5fa2?family=Speedee);
+/* 밑에꺼를K로 바꾸었더니성공 */
+@font-face {font-family: "SpeedeeK"; src: url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.eot"); src: url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.woff") format("woff"), url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/827d075b1538829cc0db75696e4d5fa2.svg#Speedee") format("svg"); }
+* {
+    -webkit-text-size-adjust: none;
+    /* -webkit-box-sizing: border-box; */
+    /* -moz-box-sizing: border-box; */
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family:SpeedeeK;
+    font-weight:400;
+    font-style:normal;
+    src: url(../font/Speedee_K_L.eot);
+    src: url(../font/Speedee_K_L.eot#iefix) format('embedded-opentype'),
+         url(../font/Speedee_K_L.woff) format('woff'),
+         url(../font/Speedee_K_L.ttf) format('truetype'),
+         url(../font/Speedee_K_L.svg#webfont) format('svg')}
+  @font-face {
+    font-family:SpeedeeK;
+    font-weight:500;
+    font-style:normal;
+    src: url(../font/Speede2019-11-13e_K_R.eot);
+    src: url(../font/Speedee_K_R.eot#iefix) format('embedded-opentype'),
+         url(../font/Speedee_K_R.woff) format('woff'),
+         url(../font/Speedee_K_R.ttf) format('truetype'),
+         url(../font/Speedee_K_R.svg#webfont) format('svg')}
+  @font-face {
+    font-family:SpeedeeK;
+    font-weight:600;
+    font-style:normal;
+    src: url(../font/Speedee_K_B.eot);
+    src: url(../font/Speedee_K_B.eot#iefix) format('embedded-opentype'),
+         url(../font/Speedee_K_B.woff) format('woff'),
+         url(../font/Speedee_K_B.ttf) format('truetype'),
+         url(../font/Speedee_K_B.svg#webfont) format('svg')}
+
+body, input, select, textarea, button, pre {
+    font-family: SpeedeeK, "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Arial, sans-serif;
+    color: rgb(128, 128, 128);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-width: 1280px;
+    height: 141px;
+    text-align: center;
+    border-bottom: 1px solid #ffbc0d;
+    background: #fff;
+}
+
+.header .headArea {
+    height: 100%;
+}
+.headArea, .footArea {
+    width: 1168px;
+    margin: 0 auto;
+}
+.header .hLogo {
+    position: relative;
+    top: 28px;
+    float: left;
+    z-index: 1;
+}
+.header .hLogo a {
+    display: block;
+}
+
+
+.header .hMenu {
+    height: 100%;
+    padding: 52px 0;
+}
+.header .hMenu .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: #fff;
+}
+
+.header .hMenu .menu .depth1 {
+    display: inline-block;
+    padding-left: 60px;
+    text-align: left;
+    vertical-align: top;
+}
+.header .hMenu .menu .depth1 a {
+    display: inline-block;
+    vertical-align: top;
+}
+.header .hMenu .menu .depth1>li {
+    float: left;
+}
+.header .hMenu .menu .depth1>li .dth1 {
+    position: relative;
+    margin-right: 85px;
+    padding: 0 10px;
+    color: #292929;
+    font-size: 20px;
+    line-height: 140px;
+    font-weight: 600;
+}
+
+.header .hMenu .menu .depth2 {
+    /* 세부내용안보이게 설정 */
+    display: none;
+    padding: 35px 10px 45px;
+}
+.header .hMenu .menu .depth2>li:first-child {
+    margin-top: 0;
+}
+.header .hMenu .menu .depth2>li {
+    margin-top: 15px;
+}
+.header .hMenu .menu .depth2>li .dth2 {
+    line-height: 1.6;
+    border-bottom: 1px solid transparent;
+}
+/* 메뉴 호버 */
+/* 호버하면 세부메뉴 보임 */
+.header .hMenu .menu .depth1:hover .depth2{
+    display:block;
+}
+.header .hMenu .menu .depth1>li:hover .dth1:after{
+    content:" ";
+    position:absolute;
+    bottom:-3px;
+    left:0;
+    right:0;
+    border-bottom:3px solid #f5bd43
+}
+
+.header .hMenu .menu .depth2>li .dth2:hover{
+    color:#000;
+    border-bottom:1px 
+    solid #000
+}
+
+
+
+
+
+
+
+
+
+
