@@ -1,10 +1,4 @@
-.wrapper {
-    overflow: hidden;
-    position: relative;
-    min-width: 1280px;
-    min-height: 100%;
-    padding: 140px 0 230px;
-}
+
 /* 폰트적용 */
 @import url(//db.onlinewebfonts.com/c/827d075b1538829cc0db75696e4d5fa2?family=Speedee);
 /* 밑에꺼를K로 바꾸었더니성공 */
@@ -43,127 +37,58 @@
          url(../font/Speedee_K_B.woff) format('woff'),
          url(../font/Speedee_K_B.ttf) format('truetype'),
          url(../font/Speedee_K_B.svg#webfont) format('svg')}
-
-body, input, select, textarea, button, pre {
-    font-family: SpeedeeK, "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Arial, sans-serif;
-    color: rgb(128, 128, 128);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.9;
+/* HEADER */
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    min-width: 1280px;
+    min-height: 100%;
+    padding: 140px 0 230px;
 }
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.header {
+.wrapper header{
     position: absolute;
+    width:100%;
+    height: 141px;
     top: 0;
     left: 0;
-    right: 0;
-    min-width: 1280px;
-    height: 141px;
     text-align: center;
     border-bottom: 1px solid #ffbc0d;
-    background: #fff;
+    background:blue;
 }
-
-.header .headArea {
-    height: 100%;
+.wrapper header .h-inner{
+   width:1280px;
+   height:100%;
+   margin:0 auto;
+   background-color: darkkhaki;
 }
-.headArea, .footArea {
+.wrapper main{
+    position: relative;
+    max-width:1900px;
+    height: 540px;
+    margin:0 auto;
+    background-color: darkolivegreen;
+}
+.wrapper .contents-list{
+    width:100%;
+    height:1271px;
+    background-color: darksalmon;
+    
+}
+.wrapper .contents-list .c-inner{
     width: 1168px;
+    height:1271px;
     margin: 0 auto;
-}
-.header .hLogo {
-    position: relative;
-    top: 28px;
-    float: left;
-    z-index: 1;
-}
-.header .hLogo a {
-    display: block;
+    background-color: darkslateblue;
+    padding:30px 0 60px;
+    box-sizing: border-box;
 }
 
-
-.header .hMenu {
-    height: 100%;
-    padding: 52px 0;
+.wrapper footer{
+   position: absolute;
+   height: 259.4px;
+   bottom:0px;
+   left:0px;
+   right:0px;
+   background-color: black;
 }
-.header .hMenu .menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    background: #fff;
-}
-
-.header .hMenu .menu .depth1 {
-    display: inline-block;
-    padding-left: 60px;
-    text-align: left;
-    vertical-align: top;
-}
-.header .hMenu .menu .depth1 a {
-    display: inline-block;
-    vertical-align: top;
-}
-.header .hMenu .menu .depth1>li {
-    float: left;
-}
-.header .hMenu .menu .depth1>li .dth1 {
-    position: relative;
-    margin-right: 85px;
-    padding: 0 10px;
-    color: #292929;
-    font-size: 20px;
-    line-height: 140px;
-    font-weight: 600;
-}
-
-.header .hMenu .menu .depth2 {
-    /* 세부내용안보이게 설정 */
-    display: none;
-    padding: 35px 10px 45px;
-}
-.header .hMenu .menu .depth2>li:first-child {
-    margin-top: 0;
-}
-.header .hMenu .menu .depth2>li {
-    margin-top: 15px;
-}
-.header .hMenu .menu .depth2>li .dth2 {
-    line-height: 1.6;
-    border-bottom: 1px solid transparent;
-}
-/* 메뉴 호버 */
-/* 호버하면 세부메뉴 보임 */
-.header .hMenu .menu .depth1:hover .depth2{
-    display:block;
-}
-.header .hMenu .menu .depth1>li:hover .dth1:after{
-    content:" ";
-    position:absolute;
-    bottom:-3px;
-    left:0;
-    right:0;
-    border-bottom:3px solid #f5bd43
-}
-
-.header .hMenu .menu .depth2>li .dth2:hover{
-    color:#000;
-    border-bottom:1px 
-    solid #000
-}
-
-
-
-
-
-
-
-
-
 
