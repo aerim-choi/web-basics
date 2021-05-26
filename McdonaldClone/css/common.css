@@ -255,7 +255,6 @@ form {
   
   
  .header .hMenu .menu .depth2 {
-     /* 세부메뉴보이냐 안보이냐~  */
     display: none;
     padding: 35px 10px 45px;
  }

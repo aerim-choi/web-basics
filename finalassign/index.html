@@ -23,20 +23,168 @@
 <body>
     <div class="wrapper">
         <!-- 헤더 -->
-        <header>
-            <div class="h-inner"></div>
+        <header id="h" class="header" style="margin-top:0px">
+            <div class="h-inner">
+                <strong class="hLogo">
+                    <a href="http://www.mcdonalds.co.kr" class="logo" title="메인으로 이동">
+                        <img src="https://www.mcdonalds.co.kr/kor/images/common/logo.png" alt="맥도날드">
+                    </a>
+                </strong>
+                <nav class="hMenu" >
+                    <div class="menu">
+                        <ul class="depth1">
+                            <!-- Menu -->
+                            <li>
+                                <a href="https://www.mcdonalds.co.kr/kor/menu/list.do" class="dth1">Menu</a>
+                                <!-- Menu하단 -->
+                                <ul class="depth2">
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/menu/list.do" class="dth2">버거</a></li>
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/menu/list.do" role="button">맥런치</a> </li>	
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/menu/list.do" class="dth2">맥모닝</a></li>
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/menu/list.do" role="button">해피스낵</a> </li>	
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/menu/list.do" class="dth2">사이드 & 디저트</a> </li>
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/menu/list.do" class="dth2">맥카페 & 음료</a> </li>
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/menu/list.do" class="dth2">해피밀</a> </li>			
+                                </ul>
+                            </li>
+                            <!-- Store -->
+                            <li>
+                                <a href="https://www.mcdonalds.co.kr/kor/store/main.do" class="dth1">Store</a>
+                                <!-- Store하단 -->
+                                <ul class="depth2">
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/store/main.do" class="dth2">매장찾기</a></li>
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/store/mcdelivery.do" class="dth2">맥딜리버리</a></li>
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/store/mcdrive.do" class="dth2">맥드라이브</a></li>
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/store/rental.do" class="dth2">임차문의</a></li>
+                                </ul>
+                            </li>
+                            <!-- What's New -->
+                            <li>
+                                <!-- What's New하단 -->
+                                <a href="https://www.mcdonalds.co.kr/kor/promotion/list.do" class="dth1">What's New</a>
+                                <ul class="depth2">
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/promotion/list.do" class="dth2">프로모션</a></li>
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/news/list.do" class="dth2">새로운 소식</a></li>
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/happymeal/list.do" class="dth2">이달의 해피밀</a></li> 
+                                </ul>		
+                            </li>
+                            <!-- story -->
+                            <li>
+                                <a href="https://www.mcdonalds.co.kr/kor/story/main.do" class="dth1  ">Story</a>
+                                <!-- story하단 -->
+                                <ul class="depth2">
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/story/intro/brandintro.do" class="dth2">브랜드 소개</a></li>
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/story/society/list.do" class="dth2">사회적 책임과 지원</a></li>
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/story/competition/farmToRestaurant.do" class="dth2">맥도날드 경쟁력</a></li>
+                                    <li><a href="https://www.mcdonalds.co.kr/kor/story/people/crew.do" class="dth2">맥도날드 사람들</a></li>
+                                </ul>
+                            </li>
+                        </ul>		
+                    </div>
+                    <!-- HEADER 오른쪽 상단  -->
+                    <!-- HTML <form> 요소는 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획을 나타냅니다. -->
+                    <form id="commonSearchForm" method="post">
+                        <div class="util">
+                            <a href="https://www.mcdonalds.co.kr/kor/story/people/recruit.do" class="recruit" title="인재채용으로 이동">RECRUIT</a>
+                            <a href="https://www.mcdonalds.co.kr/eng/main.do" class="lang" title="영문사이트로 이동">ENG</a>
+                            <div class="topSearch">
+                                <button type="button" class="srch">검색열기</button>
+                            </div>
+                        </div>
+                    </form>
+                </nav>
+            </div>
         </header>
         <!-- 메인 -->
         <main>  
-        </main>
-        <!-- 메뉴콘텐츠리스트 -->
-        <section class="contents-list">
-            <div class="c-inner">
+            <div class="m-inner">
+                <div id="slider">
+                    <!-- 왼쪽 화살표 -->
+                    <button type="button" class="ctrl prev" tabindex="0" role="button" aria-label="Previous slide" style="cursor:pointer">이전</button>
+                    <!-- 오른쪽 화살표 -->
+                    <button type="button" class="ctrl next" tabindex="0" role="button" aria-label="Next slide" style="cursor:pointer">다음</button>
+                    <!-- 슬라이드 이미지들 -->
+                    <div class="slide slide1">
+                        <div class="slide__content">
+                        </div>
+                    </div>
+                    <div class="slide slide2">
+                        <div class="slide__content">
+                        </div>
+                    </div>
+                    <div class="slide slide3">
+                        <div class="slide__content">
+                        </div>
+                    </div>
+                    <div class="slide slide4">
+                        <div class="slide__content">
+                        </div>
+                    </div>
+                    <div class="slide slide5">
+                        <div class="slide__content">
+                        </div>
+                    </div>
+                    <div class="slide slide6">
+                        <div class="slide__content">
+                        </div>
+                    </div>
+                    <div class="slide slide7">
+                        <div class="slide__content">
+                        </div>
+                    </div>
+                    <div class="slide slide8">
+                        <div class="slide__content">
+                        </div>
+                    </div>
+                </div>
+                <div class="indicator">
+                    <span role="text" class="timer"><span class="bar" style="width: 78.0782%; overflow: hidden;"></span></span>
+                    <button type="button" class="play pause">정지</button><!-- 재생표시 <button type="button" class="play">재생</button> -->
+                </div>
             </div>
-        </section>
+        </main>
+
+        <!-- 메뉴콘텐츠리스트 -->
+        <div class="contArea mainCont">
+            <div class="c-inner">
+                <h2 class="titMain">McDonald's LIVE</h2>
+            </div>
+        </div>
+        <div class="aside">
+            <a href="https://www.mcdelivery.co.kr/kr/" class="goDelivery" target="_blank" title="새창 열림">Mcdelivery</a>
+        </div>
+        <button type="button" class="btnTop">맨 위로 가기</button>
+        
         <footer>
             <div class="f-inner">
-                
+                <ul class="fUtil">
+					<li class="privacy"><a href="/kor/etc/private.do">개인정보 처리방침</a></li>
+					<li><a href="/kor/etc/location.do">위치정보 이용약관</a></li><!-- 추가 -->
+					<li><a href="/kor/etc/sitemap.do">사이트맵</a></li>
+					<li><a href="/kor/store/rental.do">임차문의</a></li>
+					<li><a href="https://voc.mcd.co.kr/MC/HOM/faqMain.jsp" target="_blank" title="새창 열림">고객문의</a></li>
+				    <li><a href="/kor/story/people/recruit.do">인재채용</a></li> 
+				</ul>
+                <ul class="fSns">
+					<li><a href="https://www.facebook.com/McDonaldsKorea" class="fb" target="_blank" title="새창 열림">맥도날드 페이스북</a></li>
+					<li><a href="https://www.instagram.com/mcdonalds_kr/" class="ig" target="_blank" title="새창 열림">맥도날드 인스타그램</a></li>
+					<li><a href="https://www.youtube.com/user/McDonaldsKor" class="yt" target="_blank" title="새창 열림">맥도날드 유투브</a></li>
+					<li><a href="https://story.kakao.com/ch/mcdonalds/feed" class="ks" target="_blank" title="새창 열림">맥도날드 카카오스토리</a></li>
+					<li class="web_accessibility">
+                       <a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" class="web_accessibility" title="국가 공인 인증기관 : 웹와치" target="_blank">
+                        <img src="https://www.mcdonalds.co.kr/kor/images/common/web_accessibility.png" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)">
+                    </a>
+                    </li> 
+				</ul>
+                <div class="fInfo">
+					<ul class="info">
+						<li>한국맥도날드(유)</li> 
+						<li>대표이사: 앤토니 마티네즈</li>
+						<li>사업자등록번호: 101-81-26409</li>
+						<li>전화주문: 1600-5252</li>
+					</ul>
+					<p class="copy">COPYRIGHT © 2019 ALL RIGHTS RESERVED BY McDonald's.</p>
+				</div>
             </div>
         </footer>
     </div>
