@@ -334,19 +334,71 @@ img {
 .wrapper .contArea{
     width:100%;
     height:1271px;
-    background-color: darksalmon;
-    
+    background-color:white;
+    padding:30px 0 60px;
 }
 .wrapper .contArea .c-inner{
     width: 1168px;
     height:1181px;
     margin: 0 auto;
-    background-color: darkslateblue;
-    padding:30px 0 60px;
-    box-sizing: border-box;
+    background-color:white;
 }
-.contArea {
-    padding: 30px 0 60px;
+.whatsNew .grid{
+    display:grid;
+    grid-template-columns:repeat(3,auto);
+    gap:30px;
+    justify-content:center;
+}
+.whatsNew .grid .circle{
+    width:366px;
+    height:438px;
+    box-shadow: 0 3px 4px rgb(0 0 0/10%);
+    border-radius: 10px;
+    background: #ffffff;
+    color:#000000;
+    font-size:32px;
+}
+ .whatsNew .grid .circle .con{
+    padding: 24px 30px;
+}
+ .whatsNew .grid .circle .con .tit{
+    display: block;
+    max-height: 118px;
+    overflow: hidden;
+    font-size: 18px;
+    color: #292929;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.btnMore {
+    margin-top: 80px;
+    text-align: center;
+}
+.btnMore .more {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    vertical-align: top;
+    text-indent: -9999px;
+    background: url(../images/btn_more.png) 0 0 no-repeat;
+}
+.circle7 ,.circle8 ,.circle9 ,.circle10 ,.circle11, .circle12{
+    display:none;
+}
+.circle13 ,.circle14,.circle15,.circle16,.circle17,.circle18{
+    display:none;
+}
+.circle19,.circle20,.circle21,.circle22{
+    display:none;
+}
+.titMain{
+    margin:0 0 60px;
+    color:#292929;
+    font-size:40px;
+    font-weight: 600;
+    line-height: 1;
 }
 
 .aside{
@@ -386,6 +438,10 @@ img {
     position: absolute;
     bottom:310px;
 }
+
+
+
+
 /* FOOTER */
 .wrapper footer{
    position: absolute;

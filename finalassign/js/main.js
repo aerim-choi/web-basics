@@ -61,20 +61,20 @@ $arrowLeft.addEventListener("click", slideToLeft);
 
 
 //헤더클래스바꾸기
-
+const $header=document.querySelector('header');
 const $headerhover= document.querySelector('.depth1');
 const $headerEl = document.getElementsByTagName('li');
 const dynamicMove= () =>{
   if(window.scrollY>=200){
-    document.getElementById('h').className='header fixed'
+    $header.className='header fixed'
     $headerhover.addEventListener("mouseover",function(){
-      document.getElementById('h').className='header fixed open'
+      $header.className='header fixed open'
     })
   }
   else{
-    document.getElementById('h').className='header'
+    $header.className='header'
     $headerhover.addEventListener("mouseover",function(){
-      document.getElementById('h').className='header open'
+      $header.className='header open'
     })
   }
 
@@ -83,6 +83,45 @@ window.addEventListener("scroll",dynamicMove);
 
 
  
+
+
+
+//더보기
+
+const $btnmore=document.querySelector(".more")
+const $contArea=document.querySelector(".contArea")
+const $cinner=document.querySelector(".c-inner")
+const $circle=document.querySelectorAll(".circle")
+let $morenum=0;
+$btnmore.addEventListener("click", function (){
+  $morenum++;
+  if($morenum===1){
+    $contArea.style.height=2215.35+"px";
+    $cinner.style.height=2115.35+"px";
+    for(let i=7;i<13;i++){
+      $circle[i+1].style.display="block";
+    }
+    }
+  else if($morenum===2){
+    $contArea.style.height=3162.32+"px";
+    $cinner.style.height=3071.32+"px";
+    for(let i=13;i<19;i++){
+      $circle[i+1].style.display="block";
+    }
+  }
+  else if($morenum===3){
+    $contArea.style.height=3437.4+"px";
+    $cinner.style.height=3382.3+"px";
+    $btnmore.style.display="none";
+    for(let i=20;i<23;i++){
+      $circle[i+1].style.display="block";
+    }
+  }
+  else{
+    console.log("그만눌르세요;;");
+  }
+});
+
 //scrolltoTop
 // class 이름이 scrollToTop인 요소 선택자
 const $scrollToTop = document.querySelector(".btnTop");
@@ -98,12 +137,11 @@ $scrollToTop.addEventListener("click", function () {
 });
 
 // 윈도우에 스크롤 이벤트가 발생하면,
-// 스크롤 위치에 따라 scrollToTop 요소의 투명도 변경
 window.addEventListener("scroll", function () {
   // 현재 스크롤 위치를 콘솔창에 출력해보세요
    console.log(window.scrollY);
-
-  //만약 스크롤 위치가 700 이상이라면,
+  
+  //만약 스크롤 위치가 1200이상이라면,
   if(window.scrollY >= 1200){
     $scrollToTop.className='btnTop fixedB'
     $asideEl.className='aside fixedB'
@@ -114,5 +152,3 @@ window.addEventListener("scroll", function () {
   }
     
 });
-
-
