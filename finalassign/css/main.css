@@ -174,7 +174,28 @@ img {
     background: url(../images/ico_search.png) 0 0 no-repeat;
 }
 
-
+/* hover기능!*/
+.header .hMenu .menu .depth1>li:hover .dth1:after{
+    content:" ";
+    position:absolute;
+    bottom:-63px;
+    left:0;
+    right:0;
+    border-bottom:3px solid #f5bd43;
+}
+.header.fixed .hMenu .menu .depth1>li:hover .dth1:after{
+    content:" ";
+    position:absolute;
+    bottom:-33px;
+    left:0;
+    right:0;
+    border-bottom:3px solid #f5bd43;
+}
+.header .hMenu .menu .depth2>li .dth2:hover{
+    color:#000;
+    border-bottom:1px 
+    solid #000
+}
 .header.open{z-index:11}
 .header.open .hMenu .menu .depth1:before{content:'';position:absolute;top:140px;left:0;right:0;height:1px;background:#e2e2e2}
 .header.open .hMenu .menu .depth1:after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:#ffbc0d}

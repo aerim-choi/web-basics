@@ -127,12 +127,16 @@ $btnmore.addEventListener("click", function (){
 const $scrollToTop = document.querySelector(".btnTop");
 //class 이름이 aside인 요소 선택자
 const $asideEl=document.querySelector('.aside');
+
+
+
 // scrollToTop 요소에 클릭 이벤트가 발생하면,
 // 페이지 상단으로 smooth하게 이동
 $scrollToTop.addEventListener("click", function () {
   window.scroll({
     top: 0,
     left: 0,
+    behavior: "smooth"
   });
 });
 
@@ -141,8 +145,9 @@ window.addEventListener("scroll", function () {
   // 현재 스크롤 위치를 콘솔창에 출력해보세요
    console.log(window.scrollY);
   
+  
   //만약 스크롤 위치가 1200이상이라면,
-  if(window.scrollY >= 1200){
+  if(window.scrollY >1200){
     $scrollToTop.className='btnTop fixedB'
     $asideEl.className='aside fixedB'
    }
