@@ -11,13 +11,15 @@ const $pbutton=document.querySelector(".play")
 
 // 자동 슬라이드 기능
 window.addEventListener("load", function () {
-  setInterval(autoSlide, 3000);
+  setInterval(autoSlide, 5000);
+  move();
 });
 
 const reset = () => {
   $slides.forEach((slide) => {
     slide.style.display = "none";
   });
+  move();
 };
 
 const autoSlide = () => {
@@ -142,14 +144,8 @@ $scrollToTop.addEventListener("click", function () {
 
 
 const $footer=document.querySelector('.footer');
-
-
-
 //윈도우에 스크롤 이벤트가 발생하면,
 window.addEventListener("scroll" , function () {
-  console.log("스크롤Y"+window.scrollY);
-  console.log("윈도우높이"+window.innerHeight);
-  console.log("footer"+$footer.offsetTop);
   if(window.scrollY+window.innerHeight>$footer.offsetTop){
     $scrollToTop.className='btnTop fixedB'
     $asideEl.className='aside fixedB'
@@ -161,5 +157,35 @@ window.addEventListener("scroll" , function () {
   }
 });
 
-//타이머 정지 플레이
 
+
+var autoplay=5000;
+function move(){
+  var elem=document.querySelector('.bar');
+  var width=1;
+  var autoplayTime=autoplay/100;
+  var id =setInterval(frame,autoplayTime);
+  function frame(){
+    if(width>=100){
+      clearInterval(id);
+    }
+    else{
+      width++;
+      elem.style.width=width+"%";
+    }
+  }
+}
+//타이머 정지 플레이
+const $playbutton=document.querySelector('.play');
+const $pausebutton=document.querySelector('.pause');
+
+$pausebutton.addEventListener("click",function(){
+  $pausebutton.style.display="none";
+  $playbutton.style.display="block";
+})
+$playbutton.addEventListener("click",function(){
+  $playbutton.style.display="none";
+  $pausebutton.style.display="block";
+  
+
+})

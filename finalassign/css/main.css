@@ -339,8 +339,19 @@ img {
     background:#ffbc0d;
 }
 
-.m-inner .indicator .play.pause{
+.m-inner .indicator .pause{
+    position:absolute;
+    top:50%;
+    left:0;
+    width:36px;
+    height: 36px;
+    margin-top:-18px;
+    overflow:hidden;
+    text-indent:-9999px;
+    border-style: none;
+    background:url(../images/bg_swiper_new.png);
     background-position: -92px -36px;
+    display:block;
 }
 .m-inner .indicator .play{
     position:absolute;
@@ -353,6 +364,7 @@ img {
     text-indent:-9999px;
     border-style: none;
     background:url(../images/bg_swiper_new.png)-92px 0 no-repeat;
+    display:none;
 }
 /* CONTENTS */
 .wrapper .contArea{
