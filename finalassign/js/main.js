@@ -93,28 +93,30 @@ const $contArea=document.querySelector(".contArea")
 const $cinner=document.querySelector(".c-inner")
 const $circle=document.querySelectorAll(".circle")
 let $morenum=0;
+
 $btnmore.addEventListener("click", function (){
   $morenum++;
+  
   if($morenum===1){
     $contArea.style.height=2215.35+"px";
     $cinner.style.height=2115.35+"px";
-    for(let i=7;i<13;i++){
-      $circle[i+1].style.display="block";
+    for(let i=6;i<12;i++){
+      $circle[i].style.display="block";
     }
     }
   else if($morenum===2){
     $contArea.style.height=3162.32+"px";
     $cinner.style.height=3071.32+"px";
-    for(let i=13;i<19;i++){
-      $circle[i+1].style.display="block";
+    for(let i=12;i<18;i++){
+      $circle[i].style.display="block";
     }
   }
   else if($morenum===3){
     $contArea.style.height=3437.4+"px";
     $cinner.style.height=3382.3+"px";
     $btnmore.style.display="none";
-    for(let i=20;i<23;i++){
-      $circle[i+1].style.display="block";
+    for(let i=18;i<22;i++){
+      $circle[i].style.display="block";
     }
   }
   else{
@@ -123,13 +125,10 @@ $btnmore.addEventListener("click", function (){
 });
 
 //scrolltoTop
-// class 이름이 scrollToTop인 요소 선택자
+//class 이름이 scrollToTop인 요소 선택자
 const $scrollToTop = document.querySelector(".btnTop");
 //class 이름이 aside인 요소 선택자
 const $asideEl=document.querySelector('.aside');
-
-
-
 // scrollToTop 요소에 클릭 이벤트가 발생하면,
 // 페이지 상단으로 smooth하게 이동
 $scrollToTop.addEventListener("click", function () {
@@ -138,22 +137,29 @@ $scrollToTop.addEventListener("click", function () {
     left: 0,
     behavior: "smooth"
   });
+ 
 });
 
-// 윈도우에 스크롤 이벤트가 발생하면,
-window.addEventListener("scroll", function () {
-  // 현재 스크롤 위치를 콘솔창에 출력해보세요
-   console.log(window.scrollY);
-  
-  
-  //만약 스크롤 위치가 1200이상이라면,
-  if(window.scrollY >1200){
+
+const $footer=document.querySelector('.footer');
+
+
+
+//윈도우에 스크롤 이벤트가 발생하면,
+window.addEventListener("scroll" , function () {
+  console.log("스크롤Y"+window.scrollY);
+  console.log("윈도우높이"+window.innerHeight);
+  console.log("footer"+$footer.offsetTop);
+  if(window.scrollY+window.innerHeight>$footer.offsetTop){
     $scrollToTop.className='btnTop fixedB'
     $asideEl.className='aside fixedB'
-   }
+  }
   else{
     $scrollToTop.className='btnTop'
     $asideEl.className='aside'
+
   }
-    
 });
+
+//타이머 정지 플레이
+

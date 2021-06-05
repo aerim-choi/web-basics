@@ -49,6 +49,7 @@ body, input, select, textarea, button, pre {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.9;
+    height: 100vh;
 }
 /* 반응형웹을 위해 잡아줌 */
 .wrapper {
@@ -107,9 +108,10 @@ img {
 }
 .header .hMenu .menu .depth1 {
     display: inline-block;
-    padding-left: 60px;
+    padding-left: 0;
     text-align: left;
     vertical-align: top;
+    margin-left: -136px;
 }
 .header .hMenu .menu .depth1>li {
     float: left;
@@ -137,6 +139,18 @@ img {
     position: relative;
     float: right;
     margin: 0 0 0 50px;
+}
+.header .hMenu .util .renter {
+    display: inline-block;
+    width: 80px;
+    padding-top: 2px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 34px;
+    text-align: center;
+    border-radius: 48px;
+    background: #db0007;
 }
 .header .hMenu .util .recruit {
     display: inline-block;
@@ -324,18 +338,7 @@ img {
     border-radius: 6px;
     background:#ffbc0d;
 }
-.m-inner .indicator .play {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 36px;
-    height: 36px;
-    margin-top: -18px;
-    overflow: hidden;
-    text-indent: -9999px;
-    border-style: none;
-    background: url(../images/main/bg_swiper_new.png) -92px 0 no-repeat;
-}
+
 .m-inner .indicator .play.pause{
     background-position: -92px -36px;
 }
@@ -405,13 +408,13 @@ img {
     text-indent: -9999px;
     background: url(../images/btn_more.png) 0 0 no-repeat;
 }
-.circle7 ,.circle8 ,.circle9 ,.circle10 ,.circle11, .circle12{
+.circle6 ,.circle7 ,.circle8 ,.circle9 ,.circle10, .circle11{
     display:none;
 }
-.circle13 ,.circle14,.circle15,.circle16,.circle17,.circle18{
+.circle12 ,.circle13,.circle14,.circle15,.circle16,.circle17{
     display:none;
 }
-.circle19,.circle20,.circle21,.circle22{
+.circle18,.circle19,.circle20,.circle21{
     display:none;
 }
 .titMain{
@@ -464,7 +467,7 @@ img {
 
 
 /* FOOTER */
-.wrapper footer{
+.wrapper .footer{
    position: absolute;
    height: 259.4px;
    bottom:0px;
@@ -477,7 +480,7 @@ img {
     text-align: center;
 }
 
-.wrapper footer .f-inner{
+.wrapper .footer .f-inner{
     width:1168px;
     height:100%;
     padding:45px 0 55px;
@@ -486,24 +489,24 @@ img {
     
 }
 
-footer .fUtil {
+.footer .fUtil {
     float: left;
     width: 190px;
 }
-footer .fUtil .privacy {
+.footer .fUtil .privacy {
     color: yellow;
 }
-footer .fUtil li+li {
+.footer .fUtil li+li {
     margin-top: 5px;
 }
-footer .fSns {
+.footer .fSns {
     float: right;
 }
-footer .fSns li {
+.footer .fSns li {
     float: left;
     margin-left: 20px;
 }
-footer .fSns a {
+.footer .fSns a {
     display: block;
     width: 40px;
     height: 40px;
@@ -511,40 +514,40 @@ footer .fSns a {
     text-indent: -9999px;
     background: url(../images/ico_sns.png) 0 0 no-repeat;
 }
-footer .fSns a.fb {
+.footer .fSns a.fb {
     background-position: 0 0;
 }
-footer .fSns a.ig {
+.footer .fSns a.ig {
     background-position: 0 -40px;
 }
-footer .fSns a.yt {
+.footer .fSns a.yt {
     background-position: 0 -80px;
 }
-footer .fSns a.ks {
+.footer .fSns a.ks {
     background-position: 0 -120px;
 }
-footer .fSns .web_accessibility {
+.footer .fSns .web_accessibility {
     margin-top: -5px;
 }
-footer .fSns .web_accessibility a {
+.footer .fSns .web_accessibility a {
     width: 100px;
     height: 66px;
     text-indent: 0;
     background: none;
 }
-footer .fSns .web_accessibility a img {
+.footer .fSns .web_accessibility a img {
     width: 100%;
 }
 
-footer .fInfo {
+.footer .fInfo {
     float: left;
     font-weight: 400;
     opacity: .6;
 }
-footer .fInfo .info li+li {
+.footer .fInfo .info li+li {
     margin-top: 5px;
 }
-footer .fInfo .copy {
+.footer .fInfo .copy {
     margin-top: 5px;
 }
 
