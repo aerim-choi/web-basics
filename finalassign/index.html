@@ -21,6 +21,7 @@
     <!-- swiper라이브러리 CDN -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>맥도날드 홈페이지</title>
 </head>
 <body>
@@ -91,6 +92,10 @@
                             <a href="/kor/store/rental.do" class="renter" title="임차문의로 이동">임차문의</a>
                             <a href="https://www.mcdonalds.co.kr/kor/story/people/recruit.do" class="recruit" title="인재채용으로 이동">RECRUIT</a>
                             <a href="https://www.mcdonalds.co.kr/eng/main.do" class="lang" title="영문사이트로 이동">ENG</a>
+                            <label class="switch">
+                                <input class="checkbox" type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
                             <div class="topSearch">
                                 <button type="button" class="srch">검색열기</button>
                             </div>
@@ -101,54 +106,31 @@
         </header>
         <!-- 메인 -->
         <main>  
-            <div class="m-inner">
-                <div id="slider">
-                    <!-- 왼쪽 화살표 -->
-                    <button type="button" class="ctrl prev" tabindex="0" role="button" aria-label="Previous slide" style="cursor:pointer">이전</button>
-                    <!-- 오른쪽 화살표 -->
-                    <button type="button" class="ctrl next" tabindex="0" role="button" aria-label="Next slide" style="cursor:pointer">다음</button>
-                    <!-- 슬라이드 이미지들 -->
-                    <div class="slide slide1">
-                        <div class="slide__content">
-                        </div>
-                    </div>
-                    <div class="slide slide2">
-                        <div class="slide__content">
-                        </div>
-                    </div>
-                    <div class="slide slide3">
-                        <div class="slide__content">
-                        </div>
-                    </div>
-                    <div class="slide slide4">
-                        <div class="slide__content">
-                        </div>
-                    </div>
-                    <div class="slide slide5">
-                        <div class="slide__content">
-                        </div>
-                    </div>
-                    <div class="slide slide6">
-                        <div class="slide__content">
-                        </div>
-                    </div>
-                    <div class="slide slide7">
-                        <div class="slide__content">
-                        </div>
-                    </div>
-                    <div class="slide slide8">
-                        <div class="slide__content">
-                        </div>
-                    </div>
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./images/mcslider1.png" /></div>
+                    <div class="swiper-slide"><img src="./images/mcslider2.png" /></div>
+                    <div class="swiper-slide"><img src="./images/mcslider3.png" /></div>
+                    <div class="swiper-slide"><img src="./images/mcslider4.png" /></div>
+                    <div class="swiper-slide"><img src="./images/mcslider5.jpg" /></div>
+                    <div class="swiper-slide"><img src="./images/mcslider6.png" /></div>
+                    <div class="swiper-slide"><img src="./images/mcslider7.png" /></div>
+                    <div class="swiper-slide"><img src="./images/mcslider8.png" /></div>
                 </div>
+                
+                <!-- 왼쪽 화살표 -->
+                <button type="button" class="ctrl prev" tabindex="0" role="button" aria-label="Previous slide" style="cursor:pointer">이전</button>
+                <!-- 오른쪽 화살표 -->
+                <button type="button" class="ctrl next" tabindex="0" role="button" aria-label="Next slide" style="cursor:pointer">다음</button>
                 <div class="indicator">
-                    <span role="text" class="timer"><span class="bar" style="width: 78.0782%; overflow: hidden;"></span></span>
+                    <span role="text" class="timer"><span class="bar animating"  overflow="hidden"></span></span>
                     <button type="button" class="pause"></button>
                     <button type="button" class="play"></button>
                 </div>
             </div>
+          
         </main>
-
+        
         <!-- 메뉴콘텐츠리스트 -->
         <div class="contArea mainCont">
             <div class="c-inner">
