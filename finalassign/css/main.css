@@ -569,7 +569,7 @@ button {
     font-weight: 600;
     line-height: 1;
 }
-/* 플로팅메뉴 */
+/* 플로팅메뉴(McDelivery) */
 .aside{
     position:fixed;
     bottom:110px;
@@ -599,6 +599,7 @@ button {
     background:url(../images/btn_delivery_02.png) 0 0 no-repeat;
     background-size:cover;
 }
+/* 플로팅메뉴(scrolltoTop) */
 .btnTop{
     position: fixed;
     bottom:45px;
