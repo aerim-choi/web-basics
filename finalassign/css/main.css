@@ -419,7 +419,7 @@ button {
 .ctrl.prev{
     left:0;
 }
-/* 슬라이더 타임바 */
+/* 슬라이더 타임바(코드샌드박스에서 가져옴) */
 .swiper-container .indicator {
     position: absolute;
     left: 50%;
