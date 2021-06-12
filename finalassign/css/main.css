@@ -1,4 +1,3 @@
-
 /* 폰트적용 */
 @import url(//db.onlinewebfonts.com/c/827d075b1538829cc0db75696e4d5fa2?family=Speedee);
 /* 밑에꺼를K로 바꾸었더니성공 */
@@ -42,7 +41,14 @@ a {
     text-decoration: none;
     color: inherit;
 }
-/* 글꼴설정 */
+/* 기본img 스타일 */
+img {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    vertical-align: top;
+}
+/* 기본글꼴설정 */
 body, input, select, textarea, button, pre {
     font-family: SpeedeeK, sans-serif;
     color: #808080;
@@ -61,8 +67,6 @@ body, input, select, textarea, button, pre {
 }
 
 /* HEADER */
-
-
 .header {
     position: absolute;
     top: 0;
@@ -74,26 +78,20 @@ body, input, select, textarea, button, pre {
     border-bottom: 1px solid #ffbc0d;
     background: #fff;
 }
+/* 헤더 안영역 */
 .header .h-inner {
     height: 100%;
     width: 1168px;
     margin: 0 auto;
 }
-
+/* 헤더로고스타일 */
 .header .hLogo {
     position: relative;
     top: 28px;
     float: left;
     z-index: 1;
 }
-
-img {
-    margin: 0;
-    padding: 0;
-    line-height: 0;
-    vertical-align: top;
-}
-
+/* 메뉴영역 */
 .header .hMenu {
     height: 100%;
     padding: 52px 0;
@@ -135,6 +133,7 @@ img {
 .header .hMenu .menu .depth2>li {
     margin-top: 15px;
 }
+/* 헤더 오른쪽부분 */
 .header .hMenu .util {
     position: relative;
     float: right;
@@ -179,6 +178,7 @@ img {
 .topSearch {
     display: inline-block;
 }
+/* 다크모드 */
 .switch {
     padding-top: 2px;
     position: relative;
@@ -186,7 +186,6 @@ img {
     width: 60px;
     height: 36px;
   }
-  /* Hide default HTML checkbox */
 .switch input {
     opacity: 0;
     width: 0;
@@ -203,7 +202,6 @@ img {
     -webkit-transition: .4s;
     transition: .4s;
 }
-  
 .slider:before {
     position: absolute;
     content: "";
@@ -224,7 +222,7 @@ input:checked + .slider {
 input:focus + .slider {
     box-shadow: 0 0 1px #808080;
 }
-  
+/* 다크모드버튼 움직임 스타일 */
 input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
@@ -238,7 +236,9 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+/* 돋보기 */
 .header .hMenu .util .srch {
+    cursor:pointer;
     margin-left: 10px;
     width: 36px;
     height: 36px;
@@ -246,6 +246,100 @@ input:checked + .slider:before {
     border-style: none;
     background: url(../images/ico_search.png) 0 0 no-repeat;
 }
+/* 돋보기 클릭했을때 화면 */
+.topSearch .srchField {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 1168px;
+    margin: -130px 0 0 -584px;
+    z-index: 9999;
+}
+legend {
+    display: block;
+    width: 0;
+    height: 0;
+    text-indent: -9000px;
+    overflow: hidden;
+}
+legend {
+    display: block;
+    width: 0;
+    height: 0;
+    text-indent: -9000px;
+    overflow: hidden;
+}
+.topSearch .srchField .form {
+    position: relative;
+    margin: 40px 0;
+    padding-right: 184px;
+}
+.topSearch .srchField .form input {
+    width: 100%;
+    padding: 0 38px;
+}
+/* 검색글자크기 */
+input[type='text']{
+    color: #292929;
+    height: 70px;
+    padding: 0 28px;
+    line-height: 1;
+    border: 1px solid #d1d1d1;
+    border-radius: 70px;
+    background: #fff;
+}
+button {
+    cursor: pointer;
+    border-radius: 0;
+    border: 0;
+    vertical-align: middle;
+    background: none;
+}
+.topSearch .srchField .form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 172px;
+    height:70px;
+}
+.btnM {
+    min-width: 172px;
+    padding: 0 38px;
+    font-size: 15px;
+    line-height: 70px;
+    border-radius: 70px;
+}
+.btnMC {
+    display: inline-block;
+    color: #292929;
+    font-weight: 600;
+    background: #ffbc0d;
+}
+
+.topSearch .srchField .close {
+    width: 90px;
+    height: 90px;
+    margin-top: 100px;
+    overflow: hidden;
+    text-indent: -9999px;
+    background: url(../images/btn_close.png) 0 0 no-repeat;
+}
+.dimmed {
+    display: none;
+    z-index: 8999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+/* open클래스 추가되면 나오는 스타일 */
+.topSearch.open .srchField, .topSearch.open .dimmed {
+    display: block;
+}
+
 
 /* hover기능!*/
 .header .hMenu .menu .depth1>li:hover .dth1:after{
@@ -269,18 +363,20 @@ input:checked + .slider:before {
     border-bottom:1px 
     solid #000
 }
-
+ /* header open */
 .header.open{z-index:11}
 .header.open .hMenu .menu .depth1:before{content:'';position:absolute;top:140px;left:0;right:0;height:1px;background:#e2e2e2}
 .header.open .hMenu .menu .depth1:after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:#ffbc0d}
 .header.open .hMenu .menu .depth1 .dth1.current:before{display:none}
 .header.open .hMenu .menu .depth1 .depth2{display:block}
+/* header fixed */
 .header.fixed{position:fixed;height:81px;z-index:11}
 .header.fixed .hLogo{top:18px}
 .header.fixed .hLogo img{height:45px}
 .header.fixed .hMenu{padding:22px 0}
 .header.fixed .hMenu .menu .depth1>li .dth1{line-height:80px}
 .header.fixed .hMenu .menu .depth1>li .dth1.current:before{bottom:25px}
+/* header fixed open */
 .header.fixed.open .hMenu .menu .depth1:before{top:80px}
 
 /* MAIN */
@@ -288,18 +384,20 @@ input:checked + .slider:before {
     position: relative;
     height: 540px;
 }
+/* 슬라이더 영역 */
 .wrapper main .swiper-container{
     max-width:1900px;
     height: 100%;
     margin:0 auto;
 }
-
+/* 슬라이더 이미지 */
 .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+/* 슬라이더 왼,오버튼 */
 .ctrl{
     position: absolute;
     top: 50%;
@@ -312,13 +410,16 @@ input:checked + .slider:before {
     border-style: none;
     z-index:1;
 }
+/* 슬라이더 왼쪽 버튼 세부사항 */
 .ctrl.next {
     right: 0;
     background-position: 0 -90px;
 }
+/* 슬라이더 오른쪽 버튼 세부사항 */
 .ctrl.prev{
     left:0;
 }
+/* 슬라이더 타임바 */
 .swiper-container .indicator {
     position: absolute;
     left: 50%;
@@ -347,9 +448,10 @@ input:checked + .slider:before {
     border-radius: 6px;
     background:#ffbc0d;
 }
-
+/* 타임바 애니메이션 */
 .animating {
-    -webkit-animation: progress 5s linear;
+    /* 5초간 progress하기 */
+    -webkit-animation: progress 5s linear; 
 }
 @-webkit-keyframes progress {
     0% {
@@ -360,8 +462,9 @@ input:checked + .slider:before {
     }
   }
   
-
+/* 타임바 멈춤버튼 */
 .swiper-container .indicator .pause{
+    cursor: pointer;
     position:absolute;
     top:50%;
     left:0;
@@ -375,7 +478,9 @@ input:checked + .slider:before {
     background-position: -92px -36px;
     display:block;
 }
+/* 타임바 재생버튼 */
 .swiper-container .indicator .play{
+    cursor:pointer;
     position:absolute;
     top:50%;
     left:0;
@@ -407,6 +512,7 @@ input:checked + .slider:before {
     gap:30px;
     justify-content:center;
 }
+/* 컨텐츠 gird부분 영역 스타일 */
 .whatsNew .grid .circle{
     width:366px;
     height:438px;
@@ -416,9 +522,11 @@ input:checked + .slider:before {
     color:#000000;
     font-size:32px;
 }
+/* 컨텐츠 grid부분 글씨 영역 스타일 */
  .whatsNew .grid .circle .con{
     padding: 24px 30px;
 }
+/* 컨텐츠 grid부분 글씨 스타일 */
  .whatsNew .grid .circle .con .tit{
     display: block;
     max-height: 118px;
@@ -428,11 +536,12 @@ input:checked + .slider:before {
     font-weight: 500;
     line-height: 1.7;
 }
-
+/* MORE(+)버튼 영역잡기 */
 .btnMore {
     margin-top: 80px;
     text-align: center;
 }
+/* MORE(+)버튼 세부스타일 */
 .btnMore .more {
     display: inline-block;
     width: 90px;
@@ -442,6 +551,7 @@ input:checked + .slider:before {
     text-indent: -9999px;
     background: url(../images/btn_more.png) 0 0 no-repeat;
 }
+/* 컨텐츠 숨김처리 */
 .circle6 ,.circle7 ,.circle8 ,.circle9 ,.circle10, .circle11{
     display:none;
 }
@@ -451,6 +561,7 @@ input:checked + .slider:before {
 .circle18,.circle19,.circle20,.circle21{
     display:none;
 }
+/* 컨텐츠 제목(McDonald Live) 글씨 스타일  */
 .titMain{
     margin:0 0 60px;
     color:#292929;
@@ -458,7 +569,7 @@ input:checked + .slider:before {
     font-weight: 600;
     line-height: 1;
 }
-
+/* 플로팅메뉴 */
 .aside{
     position:fixed;
     bottom:110px;
@@ -531,7 +642,7 @@ input:checked + .slider:before {
     margin:0 auto;
     
 }
-
+/* FOOTER 왼쪽 */
 .footer .fUtil {
     float: left;
     width: 190px;
@@ -542,6 +653,7 @@ input:checked + .slider:before {
 .footer .fUtil li+li {
     margin-top: 5px;
 }
+/* FOOTER 오른쪽 */
 .footer .fSns {
     float: right;
 }
@@ -581,7 +693,7 @@ input:checked + .slider:before {
 .footer .fSns .web_accessibility a img {
     width: 100%;
 }
-
+/* FOOTER 왼쪽에서 두번째 영역 */
 .footer .fInfo {
     float: left;
     font-weight: 400;

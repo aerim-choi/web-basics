@@ -89,39 +89,86 @@
                     <!-- HTML <form> 요소는 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획을 나타냅니다. -->
                     <form id="commonSearchForm" method="post">
                         <div class="util">
-                            <a href="/kor/store/rental.do" class="renter" title="임차문의로 이동">임차문의</a>
+                            <a href="https://www.mcdonalds.co.kr/kor/store/rental.do" class="renter" title="임차문의로 이동">임차문의</a>
                             <a href="https://www.mcdonalds.co.kr/kor/story/people/recruit.do" class="recruit" title="인재채용으로 이동">RECRUIT</a>
                             <a href="https://www.mcdonalds.co.kr/eng/main.do" class="lang" title="영문사이트로 이동">ENG</a>
+                            <!-- 다크모드 스위치 -->
                             <label class="switch">
                                 <input class="checkbox" type="checkbox">
                                 <span class="slider round"></span>
                             </label>
+                            <!-- 검색버튼 -->
                             <div class="topSearch">
-                                <button type="button" class="srch">검색열기</button>
+                                <button type="button" class="srch" >검색열기</button>
+                                <!-- 검색버튼 클릭시 나오는 화면 -->
+                                <fieldset class="srchField">
+                                    <legend>통합검색</legend>
+                                    <div class="form">
+                                        <input type="text" name="commonSearchWord" id="commonSearchWord" placeholder="매장 또는 메뉴정보를 검색하실 수 있습니다." title="검색어 입력" onkeypress="if( event.keyCode==13 ){gotoCommonSearch();}">
+                                        <button type="button" class="btnMC btnM">검색하기</button>
+                                    </div>
+                                    <button type="button" class="close">검색 닫기</button>
+                                </fieldset>
+                                <div class="dimmed"></div>
                             </div>
+                           
                         </div>
                     </form>
                 </nav>
             </div>
         </header>
-        <!-- 메인 -->
+        <!-- MAIN -->
+        <!--슬라이더 -->
         <main>  
             <div class="swiper-container mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="./images/mcslider1.png" /></div>
-                    <div class="swiper-slide"><img src="./images/mcslider2.png" /></div>
-                    <div class="swiper-slide"><img src="./images/mcslider3.png" /></div>
-                    <div class="swiper-slide"><img src="./images/mcslider4.png" /></div>
-                    <div class="swiper-slide"><img src="./images/mcslider5.jpg" /></div>
-                    <div class="swiper-slide"><img src="./images/mcslider6.png" /></div>
-                    <div class="swiper-slide"><img src="./images/mcslider7.png" /></div>
-                    <div class="swiper-slide"><img src="./images/mcslider8.png" /></div>
+                    <div class="swiper-slide" >
+                        <a href="">  <!-- 행사종료되서 링크없음 -->
+                            <img src="./images/mcslider1.png" />
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=312&utm_medium=Corp_site&utm_source=Main_banner&utm_campaign=0520_McLunchRenewal">
+                            <img src="./images/mcslider2.png" />
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=317&utm_medium=Corp_site&utm_source=Main_banner&utm_campaign=0401_FOF">
+                            <img src="./images/mcslider3.png" />
+                        </a>    
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=321&utm_medium=Corp_site&utm_source=Main_banner&utm_campaign=0426_McWings">
+                            <img src="./images/mcslider4.png" />
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=329&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0527_F.Olauch">
+                            <img src="./images/mcslider5.jpg" />
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=320&utm_medium=Corp_site&utm_source=Main_banner&utm_campaign=0408_Strawberrys">
+                            <img src="./images/mcslider6.png" />
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=318&utm_medium=Corp_site&utm_source=Main_banner&utm_campaign=0401_Chiller">
+                            <img src="./images/mcslider7.png" />
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=313&utm_medium=Corp_site&utm_source=Main_banner&utm_campaign=0311_HappySnack">
+                            <img src="./images/mcslider8.png" />
+                        </a>
+                    </div>
                 </div>
                 
                 <!-- 왼쪽 화살표 -->
                 <button type="button" class="ctrl prev" tabindex="0" role="button" aria-label="Previous slide" style="cursor:pointer">이전</button>
                 <!-- 오른쪽 화살표 -->
                 <button type="button" class="ctrl next" tabindex="0" role="button" aria-label="Next slide" style="cursor:pointer">다음</button>
+                <!-- 타임바 -->
                 <div class="indicator">
                     <span role="text" class="timer"><span class="bar animating"  overflow="hidden"></span></span>
                     <button type="button" class="pause"></button>
@@ -173,97 +220,99 @@
                                 <strong class="tit">올해도 여름엔 맥윙!<br>돌아온 맥윙을 만나보세요!</strong>
                             </div>
                         </div>
-                        <div class="circle circle6" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=321&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0426_McWings'" style="cursor:pointer;">
+                        <div class="circle circle6" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=320&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0408_Strawberry'" style="cursor:pointer;">
                             <img style="border-radius:10px 10px 0px 0px;" src="images/grid6.png" alt="스트로베리 2종 아이스크림 출시!">
                             <div class="con">
                                 <strong class="tit">스트로베리 2종 아이스크림 출시!</strong>
                             </div>
                         </div>
-                        <div class="circle circle7" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=321&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0426_McWings'" style="cursor:pointer;">
+                        <div class="circle circle7" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=318&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0401_Chiller'" style="cursor:pointer;">
                             <img style="border-radius:10px 10px 0px 0px;" src="images/grid7.png" alt="제주 한라봉 칠러 & 애플망고 칠러 출시!">
                             <div class="con">
                                 <strong class="tit">제주 한라봉 칠러 & 애플망고 칠러 출시!</strong>
                             </div>
                         </div>
-                        <div class="circle circle8" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=321&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0426_McWings'" style="cursor:pointer;">
+                        <div class="circle circle8" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=313&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0311_HappySnack'" style="cursor:pointer;">
                             <img style="border-radius:10px 10px 0px 0px;" src="images/grid8.png" alt="모두가 해피한 스낵 할인">
                             <div class="con">
                                 <strong class="tit">모두가 해피한 스낵 할인</strong>
                             </div>
                         </div>
-                        <div class="circle circle9" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=321&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0426_McWings'" style="cursor:pointer;">
+                        <div class="circle circle9" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=312&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0225_SpecialSet'" style="cursor:pointer;">
                             <img style="border-radius:10px 10px 0px 0px;" src="images/grid9.png" alt="빅맥 스페셜 세트&amp;상하이 버거 스페셜 세트 출시!">
                             <div class="con">
                                 <strong class="tit">빅맥 스페셜 세트&amp;<br>상하이 버거 스페셜 세트 출시!</strong>
                             </div>
                         </div>
-                        <div class="circle circle10" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=321&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0426_McWings'" style="cursor:pointer;">
+                        <div class="circle circle10" onclick="location.href='https://www.mcdonalds.co.kr/kor/menu/detail.do?page=1&seq=366&sub_category_seq=4&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0225_BLT_Egg_Muffin'" style="cursor:pointer;">
                             <img style="border-radius:10px 10px 0px 0px;" src="images/grid10.png" alt="갓 구워내 따뜻하고 신선한&amp;베이컨 토마토">
                             <div class="con">
                                 <strong class="tit">갓 구워내 따뜻하고 신선한<br>베이컨 토마토</strong>
                             </div>
                         </div>
-                        <div class="circle circle11" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=321&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0426_McWings'" style="cursor:pointer;">
+                        <div class="circle circle11" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=306&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0118_Mccafe'" style="cursor:pointer;">
                             <img style="border-radius:10px 10px 0px 0px;" src="images/grid11.png" alt="매일 마시는 커피니까 더 맛있게!&amp;업그레이드된 NEW McCafe">
                             <div class="con">
                                 <strong class="tit">매일 마시는 커피니까 더 맛있게!&amp;업그레이드된 NEW McCafe</strong>
                             </div>
                         </div>
-                        <div class="circle circle12" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=321&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0426_McWings'" style="cursor:pointer;">
+                        <div class="circle circle12" onclick="location.href='https://www.youtube.com/watch?v=etL7jfKaIY8&feature=youtu.be'" style="cursor:pointer;">
                             <img style="border-radius:10px 10px 0px 0px;" src="images/grid12.png" alt="빨대가 필요 없는 뚜껑이를 만나보세요!">
                             <div class="con">
                                 <strong class="tit">빨대가 필요 없는 뚜껑이를 만나보세요!</strong>
                             </div>
                         </div>
-                        <div class="circle circle13" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=321&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0426_McWings'" style="cursor:pointer;">
+                        <!-- 행사종료로 링크없음 -->
+                        <div class="circle circle13"  style="cursor:pointer;"> 
                             <img style="border-radius:10px 10px 0px 0px;" src="images/grid13.png" alt="맥딜리버리 온라인 사이트/앱에서&amp;결제 시 최대 2천 M포인트 사용(5월31일까지)">
                             <div class="con">
                                 <strong class="tit">맥딜리버리 온라인 사이트/앱에서&amp;결제 시 최대 2천 M포인트 사용(5월31일까지)</strong>
                             </div>
                         </div>
-                        <div class="circle circle14" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=321&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0426_McWings'" style="cursor:pointer;">
+                        <div class="circle circle14" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=278&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=1105_BestBurger'" style="cursor:pointer;">
                             <img style="border-radius:10px 10px 0px 0px;" src="images/grid14.png" alt="디테일 차이가 버거의 차이">
                             <div class="con">
                                 <strong class="tit">디테일 차이가 버거의 차이</strong>
                             </div>
                         </div>
-                        <div class="circle circle15" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=321&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0426_McWings'" style="cursor:pointer;">
+                        <div class="circle circle15" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=265&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0323_CLR&utm_content=Corp_Contents'" style="cursor:pointer;">
                             <img style="border-radius:10px 10px 0px 0px;" src="images/grid15.png" alt="더 편리해진 맥도날드 앱 사용법">
                             <div class="con">
                                 <strong class="tit">더 편리해진 맥도날드 앱 사용법</strong>
                             </div>
                         </div>
-                        <div class="circle circle16" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=321&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0426_McWings'" style="cursor:pointer;">
+                        <div class="circle circle16" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=259&searchStatus=&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0120_BFCombo&utm_content=Corp_Contents'" style="cursor:pointer;">
                             <img style="border-radius:10px 10px 0px 0px;" src="images/grid16.png" alt="2900원 부터 즐기는&amp;맥모닝 콤보를 만나보세요">
                             <div class="con">
                                 <strong class="tit">2900원 부터 즐기는&amp;맥모닝 콤보를 만나보세요</strong>
                             </div>
                         </div>
-                        <div class="circle circle17" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=321&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0426_McWings'" style="cursor:pointer;">
+                        <div class="circle circle17" onclick="location.href='https://www.mcdonalds.co.kr/kor/story/competition/farmToRestaurant.do?utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=Farm_to_the_restaurant&utm_content=Corp_Contents'" style="cursor:pointer;">
                             <img style="border-radius:10px 10px 0px 0px;" src="images/grid17.png" alt="농장에서 레스토랑까지">
                             <div class="con">
                                 <strong class="tit">농장에서 레스토랑까지&amp;좋은 음식을 제공하기 위한 맥도날드의&amp;노력을 확인하세요!</strong>
                             </div>
                         </div>
-                        <div class="circle circle18" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=321&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0426_McWings'" style="cursor:pointer;">
+                        <div class="circle circle18" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=227&rnum=5&searchStatus=&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=GMAL_launching&utm_content=Corp_Contents'" style="cursor:pointer;">
                             <img style="border-radius:10px 10px 0px 0px;" src="images/grid18.png" alt="취향저격 쿠폰부터 쏠쏠한 정보까지!지금&amp;맥도날드 앱 가입하고 쿠폰받자">
                             <div class="con">
                                 <strong class="tit">취향저격 쿠폰부터 쏠쏠한 정보까지!지금&amp;맥도날드 앱 가입하고 쿠폰받자</strong>
                             </div>
                         </div>
-                        <div class="circle circle19" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=321&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0426_McWings'" style="cursor:pointer;">
+                        <!-- 행사종료로 링크없음 -->
+                        <div class="circle circle19"  style="cursor:pointer;">
                             <img style="border-radius:10px 10px 0px 0px;" src="images/grid19.png" alt="맥도날드 주방 공개의날">
                             <div class="con">
                                 <strong class="tit">맥도날드 버거는 어떻게 만들어질까?&amp;주방은 어떻게 관리되고 있을까?&amp;전국 매장에서 직접 확인해보세요!</strong>
                             </div>
                         </div>
-                        <div class="circle circle20" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=321&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0426_McWings'" style="cursor:pointer;">
+                        <div class="circle circle20" onclick="location.href='https://www.mcdonalds.co.kr/kor/story/society/kidsSoccer.do?utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=SoccerClub&utm_content=Corp_Contents'" style="cursor:pointer;">
                             <img style="border-radius:10px 10px 0px 0px;" src="images/grid20.jpg" alt="로날드 맥도날드 어린이 축구교실">
                             <div class="con">
                                 <strong class="tit">전문 코치들의 체계적이고 전문적인&amp;교육을 통해 지역사회 행복에 기여합니다.</strong>
                             </div>
                         </div>
-                        <div class="circle circle21" onclick="location.href='https://www.mcdonalds.co.kr/kor/promotion/detail.do?page=1&seq=321&utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=0426_McWings'" style="cursor:pointer;">
+                        <div class="circle circle21" onclick="location.href='https://www.mcdonalds.co.kr/kor/store/rental.do?utm_medium=Corp_site&utm_source=Main_cardblock&utm_campaign=RealEstate&utm_content=Corp_Contents'" style="cursor:pointer;">
                             <img style="border-radius:10px 10px 0px 0px;" src="images/grid21.png" alt="귀하의 토지,건물에 맥도날드를 유치&amp;하세요!">
                             <div class="con">
                                 <strong class="tit">귀하의 토지,건물에 맥도날드를 유치&amp;하세요!</strong>
@@ -271,16 +320,19 @@
                         </div>
                     </div>
                 </div>
+                <!-- 더보기 버튼 -->
                 <div class="btnMore" id="btnMore">
                     <div class="more" title="더보기" style="cursor:pointer">더보기</div>
                 </div>
             </div>
         </div>
+        <!-- 플로팅메뉴 -->
         <div class="aside">
             <a href="https://www.mcdelivery.co.kr/kr/" class="goDelivery" target="_blank" title="새창 열림">Mcdelivery</a>
         </div>
         <button type="button" class="btnTop" style="cursor:pointer">맨 위로 가기</button>
         
+        <!-- FOOTER -->
         <footer class="footer">
             <div class="f-inner">
                 <ul class="fUtil">
