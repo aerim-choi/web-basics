@@ -215,7 +215,7 @@ body, input, select, textarea, button, pre {
 }
 
 input:checked + .slider {
-    background-color: #808080;
+    background-color: #a000fd;
 }
 
   
